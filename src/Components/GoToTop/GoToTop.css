@@ -1,0 +1,63 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-btn {
+    font-size: 2.4rem;
+    width: 2.5rem;
+    height: 3.2rem;
+    color: white;
+    background-color:  orangered;
+    position: fixed;
+    bottom: 4.5rem;
+    right: 4.5rem;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+ 
+.top-btn .top-btn--icon {
+    animation: gototop 1.2s linear infinite alternate-reverse;
+}
+
+  @keyframes gototop {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-0.5rem);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  } 
+  .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    font-size: 45px;
+  }
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  
+
+ .top-btn--icon{
+    font-size: 1.8rem;
+    position:relative;
+    bottom: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    color: aqua;
+} 
