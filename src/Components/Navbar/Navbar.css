@@ -3,8 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
-  background-color: #fcfcfc;
+  font-family: 'Poppins', sans-serif;
+  color: #222344;
 }
 
 .container {
@@ -17,30 +17,20 @@ body {
   height: 100%;
 }
 
-/* .navbar {
-  height: 60px;
-  background-color:  rgb(245, 115, 1);
-  position: relative;
-} */
-/* Add this CSS code to your Navbar.css file */
 
-.navbar {
-  /* background-color: rgb(245, 115, 1); */
-  /* background-color:orangered; */
-  height: 65px;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: fixed; /* Change to fixed */
-  width: 100%; /* Occupy the full width */
-  top: 0; /* Stick to the top */
-  z-index: 1000; /* Ensure it appears above other elements */
-
+.navbar { 
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.15);
+  z-index: 10;
+  position: fixed;
+  height: 68px;
+  top: 0;
+  width: 100%;
 }
 
-/* ... (rest of your CSS code remains the same) */
 
 .logo{
-  display: flex;
-  align-items: center;
+  margin-left: -75px;
 }
 .logo img {
   padding-top: 2px;
@@ -56,8 +46,9 @@ body {
 
 .nav-elements ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style-type: none;
+  
 }
 
 .nav-elements ul li:not(:last-child) {
@@ -65,16 +56,17 @@ body {
 }
 
 .nav-elements ul a {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 600;
-  color: white;
+  color:#28183b;
+   /* #e26959; */
   text-decoration: none;
 }
 
 .nav-elements ul a.active {
-  color: #FFA07A;
+  color:#28183b;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 18px;
   position: relative;
 }
 
@@ -125,4 +117,15 @@ body {
     margin-right: unset;
     margin-top: 22px;
   }
+}
+.btnli{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 150px;
+  margin-right: -60px;
+}
+.btnli .btn1{
+  margin-right: 20px;
 }
