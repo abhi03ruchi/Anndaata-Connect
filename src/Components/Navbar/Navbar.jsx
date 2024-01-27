@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/name.png";
 import Button from "./Button";
 import "./Navbar.css";
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar-body">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 md:w-auto w-full flex justify-between">
-          <img src={Logo} alt="logo" className="md:cursor-pointer" style={{height:'90px'}}/>
+          <img src={Logo} alt="logo" className="md:cursor-pointer" style={{height:'100px'}}/>
           <div className=" text-4xl px-6 py-6 md:hidden" onClick={() => setOpen(!open)}>
             <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
           </div>
@@ -22,19 +22,15 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/" className="nav-li">
-              Home
+              Projects
             </Link>
           </li>
           <li>
             <Link to="/" className="nav-li">
-              Home
+              About
             </Link>
           </li>
-          <li>
-            <Link to="/" className="nav-li">
-              Home
-            </Link>
-          </li>
+         
         </ul>
         <div className="md:block hidden">
           <Button />

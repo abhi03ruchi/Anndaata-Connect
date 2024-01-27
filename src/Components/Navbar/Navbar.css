@@ -27,9 +27,9 @@ padding-bottom: 1.75rem;
 font-size: 1.125rem;
 line-height: 1.75rem; 
 font-weight: 600; 
-color: #ffffff; 
+color:  #28183b; 
 text-decoration: none; 
 }
 .nav-li:hover{
-  color:red;
+  color:antiquewhite;
 }

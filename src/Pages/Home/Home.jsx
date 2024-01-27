@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <>
         <div>  
-        {/* <Navbar /> */}
+        <Navbar />
             <HomeBanner/>
             <div className="dha-steps">
                 <h1>What    Do We Do ?</h1>
@@ -59,60 +59,15 @@ const Home = () => {
                 {/* <img src={AvekshaImg} /> */}
             </div>
 
-
-            <div className="sect" id="ourServices">
-                {/* Title */}
-                <div id="title" className="title">
-                    <span style={{ paddingLeft: "3.5rem" }} className="heading">
-                        OUR <br /> SERVICES
-                    </span>
-                </div>
-
-                {/* Card Containers */}
-                <div id="cardContainer" className="card">
-                    {/* Customer Card */}
-                    <div id="customerCard" className="cardC">
-                        <div id="customerCardTitle" className="">
-                            <span className="card-title">FOR CUSTOMERS</span>
-                        </div>
-                        <div
-                            id="customerCardContent"
-                            className="card-block"
-                        >
-                            <img src={forcustomers} className="card-img" alt="a group of people with yellow heads" loading="lazy" />
-                            <p className="card-para">
-                                You can choose your own style, see how it looks as well as choose from a choice of tailor whom you want to get your clothes stitched from.{" "}
-                            </p>
-                            <Link to="/CustomersPage">
-                                <button className="card-button">
-                                    Explore Now
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* Tailor Card */}
-                    <div id="customerCard" className="cardC">
-                        <div id="customerCardTitle" className="">
-                            <span className="card-title">FOR CUSTOMERS</span>
-                        </div>
-                        <div
-                            id="customerCardContent"
-                            className="card-block"
-                        >
-                            <img src={forcustomers} className="card-img" alt="a group of people with yellow heads" loading="lazy" />
-                            <p className="card-para">
-                                You can choose your own style, see how it looks as well as choose from a choice of tailor whom you want to get your clothes stitched from.{" "}
-                            </p>
-                            <Link to="/CustomersPage">
-                                <button className="card-button">
-                                    Explore Now
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Parallax
+                // blur={{ min: -15, max: 15 }}
+                bgImage={group}
+                bgImageAlt="the dog"
+                strength={200}
+            >
+                {/* Blur transition from min to max */}
+                <div style={{ height: '80vh' }} />
+            </Parallax>
 
 
 
@@ -152,15 +107,7 @@ const Home = () => {
                     </li>
                 </ul>
             </div>
-            <Parallax
-                // blur={{ min: -15, max: 15 }}
-                bgImage={group}
-                bgImageAlt="the dog"
-                strength={600}
-            >
-                {/* Blur transition from min to max */}
-                <div style={{ height: '80vh' }} />
-            </Parallax>
+           
             {/* <div className="section-5">
                 <h1>NewsLetter For Subscription</h1>
                 <div className="newsletter">

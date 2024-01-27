@@ -34,7 +34,6 @@ const HomeBanner = () => {
         <>
             <div style={overlayStyle}>
                 <div style={dullOverlayStyle}>
-                    <Navbar />
                 </div>
                 <div className="banner_mainparent" style={textContainerStyle}>
                     <div className="banner_subparent">
