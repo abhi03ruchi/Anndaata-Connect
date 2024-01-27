@@ -4,43 +4,22 @@ import './Home.css';
 import image2 from './2.png';
 import image12 from './12.png';
 import image13 from './13.png';
-import { Parallax} from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import group from './groupPic.png';
 import backgrd from './backgrd.png';
 import Footer from '../../Components/Footer/Footer'
 import { Link } from "react-router-dom";
 import forcustomers from './groupPic.png';
+import HomeBanner from '../../Components/Banner/HomeBanner';
 
 const Home = () => {
     return (
-        <div>
-            <Navbar />
-            <Parallax
-                 bgImage={backgrd}
-                bgImageAlt="the dog"
-                strength={-300}
-            >
-                <div className="left">
-                    <div className="title">
-                        <h1>AnnDaata Connect</h1>
-                    </div>
-
-                    <div className="subtitle">
-                        <h2>Connecting Excess to Empathy </h2>
-                        <h2 className='one'> Minimize Waste   Maximize Impact</h2>
-                    </div>
-                    <div className="desc">
-                        <p> An initiative to raise awareness and services for food sustainability, promoting inclusivity across all communities and fostering a world without hunger. </p>
-                    </div>
-                    <div className="buttons">
-                        <button className="btn">Learn More</button>
-                    </div>
-                </div>
-                <div style={{ height: '15vh' }} />
-            </Parallax>
-
+        <>
+        <div>  
+        {/* <Navbar /> */}
+            <HomeBanner/>
             <div className="dha-steps">
-                <h1>What do we do ?</h1>
+                <h1>What    Do We Do ?</h1>
                 <div class="dha-container">
                     <div class="dha-wrapper">
                         <div class="arrow-steps clearfix">
@@ -62,8 +41,7 @@ const Home = () => {
                                 through <br />
                                 supervision<br />
                                 Branching
-                                out to <br />
-                                new community
+                                out to 
                             </span> </div>
                         </div>
                     </div>
@@ -81,61 +59,61 @@ const Home = () => {
                 {/* <img src={AvekshaImg} /> */}
             </div>
 
-    
-                <div className="sect" id="ourServices">
-                    {/* Title */}
-                    <div id="title" className="title">
-                        <span style={{ paddingLeft: "3.5rem" }} className="heading">
-                            OUR <br /> SERVICES
-                        </span>
+
+            <div className="sect" id="ourServices">
+                {/* Title */}
+                <div id="title" className="title">
+                    <span style={{ paddingLeft: "3.5rem" }} className="heading">
+                        OUR <br /> SERVICES
+                    </span>
+                </div>
+
+                {/* Card Containers */}
+                <div id="cardContainer" className="card">
+                    {/* Customer Card */}
+                    <div id="customerCard" className="cardC">
+                        <div id="customerCardTitle" className="">
+                            <span className="card-title">FOR CUSTOMERS</span>
+                        </div>
+                        <div
+                            id="customerCardContent"
+                            className="card-block"
+                        >
+                            <img src={forcustomers} className="card-img" alt="a group of people with yellow heads" loading="lazy" />
+                            <p className="card-para">
+                                You can choose your own style, see how it looks as well as choose from a choice of tailor whom you want to get your clothes stitched from.{" "}
+                            </p>
+                            <Link to="/CustomersPage">
+                                <button className="card-button">
+                                    Explore Now
+                                </button>
+                            </Link>
+                        </div>
                     </div>
 
-                    {/* Card Containers */}
-                    <div id="cardContainer" className="card">
-                        {/* Customer Card */}
-                        <div id="customerCard" className="cardC">
-                            <div id="customerCardTitle" className="">
-                                <span className="card-title">FOR CUSTOMERS</span>
-                            </div>
-                            <div
-                                id="customerCardContent"
-                                className="card-block"
-                            >
-                                <img src={forcustomers} className="card-img" alt="a group of people with yellow heads" loading="lazy"/>
-                                <p className="card-para">
-                                    You can choose your own style, see how it looks as well as choose from a choice of tailor whom you want to get your clothes stitched from.{" "}
-                                </p>
-                                <Link to="/CustomersPage">
-                                    <button className="card-button">
-                                        Explore Now
-                                    </button>
-                                </Link>
-                            </div>
+                    {/* Tailor Card */}
+                    <div id="customerCard" className="cardC">
+                        <div id="customerCardTitle" className="">
+                            <span className="card-title">FOR CUSTOMERS</span>
                         </div>
-
-                        {/* Tailor Card */}
-                        <div id="customerCard" className="cardC">
-                            <div id="customerCardTitle" className="">
-                                <span className="card-title">FOR CUSTOMERS</span>
-                            </div>
-                            <div
-                                id="customerCardContent"
-                                className="card-block"
-                            >
-                                <img src={forcustomers} className="card-img" alt="a group of people with yellow heads" loading="lazy"/>
-                                <p className="card-para">
-                                    You can choose your own style, see how it looks as well as choose from a choice of tailor whom you want to get your clothes stitched from.{" "}
-                                </p>
-                                <Link to="/CustomersPage">
-                                    <button className="card-button">
-                                        Explore Now
-                                    </button>
-                                </Link>
-                            </div>
+                        <div
+                            id="customerCardContent"
+                            className="card-block"
+                        >
+                            <img src={forcustomers} className="card-img" alt="a group of people with yellow heads" loading="lazy" />
+                            <p className="card-para">
+                                You can choose your own style, see how it looks as well as choose from a choice of tailor whom you want to get your clothes stitched from.{" "}
+                            </p>
+                            <Link to="/CustomersPage">
+                                <button className="card-button">
+                                    Explore Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
-       
+            </div>
+
 
 
             <div className="section-4">
@@ -196,6 +174,7 @@ const Home = () => {
             </div> */}
             <Footer />
         </div>
+        </>
     )
 }
 

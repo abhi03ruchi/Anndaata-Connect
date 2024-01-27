@@ -1,57 +1,58 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import logo from '../assets/logo.png'
-import './Navbar.css'
-import Button from '../Button/Button'
-import { FaBars } from "react-icons/fa";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png";
+import Button from "./Button";
+import "./Navbar.css";
 const Navbar = () => {
-    const [showNavbar, setShowNavbar] = useState(false)
+  const [open, setOpen] = useState(false);
+  return (
+    <nav className="navbar-body">
+      <div className="flex items-center font-medium justify-around">
+        <div className="z-50 md:w-auto w-full flex justify-between">
+          <img src={Logo} alt="logo" className="md:cursor-pointer" style={{height:'90px'}}/>
+          <div className=" text-4xl px-6 py-6 md:hidden" onClick={() => setOpen(!open)}>
+            <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
+          </div>
+        </div>
+        <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
+          <li>
+            <Link to="/" className="nav-li">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className="nav-li">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className="nav-li">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className="nav-li">
+              Home
+            </Link>
+          </li>
+        </ul>
+        <div className="md:block hidden">
+          <Button />
+        </div>
+        {/* Mobile nav */}
+        <ul
+          className={` md:hidden fixed w-full top-0 overflow-y-auto bottom-0 justify-center flex-col items-center text-center text-black font-medium transition-all h-60
+          duration-500
+         ${open ? "left-0" : "left-[-100%]"}
+        `}
+        >
+          <div className="py-5">
+            <Button />
+          </div>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-    const handleShowNavbar = () => {
-        setShowNavbar(!showNavbar)
-    }
-
-    return (
-        <nav className="navbar">
-            <div className="container">
-                <div className="logo">
-                    <img src={logo} alt="" />
-                </div>
-                <div className="menu-icon" onClick={handleShowNavbar}>
-                    <FaBars />
-                </div>
-                <div className={`nav-elements  ${showNavbar && 'active'}`}>
-                    <ul>
-                        <li>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/projects">Projects</NavLink>
-                        </li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <NavLink to="/contact">Contact</NavLink>
-                        </li>
-                        <li className='btnli'>
-                            <Button
-                                variant="outline"
-                                to="/login"
-                                fontweight="bold"
-                                className="btn1"
-                            >
-                                Login in
-                            </Button>
-
-                            <Button to="/signup" fontweight="bold" variant="solid">
-                                Sign up
-                            </Button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    )
-}
-export default Navbar
+export default Navbar;

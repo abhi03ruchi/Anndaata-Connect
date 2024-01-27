@@ -1,114 +1,6 @@
-/* Home.css */
-
-.left {
-    /* flex: 1; */
-     padding: 20px; 
-     margin-top: 180px;
-    margin-bottom: 180px; 
-    margin-left: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .right {
-    flex: 0.5;
-} */
-
-.left .title {
-    font-size: 50px;
-    color: wheat;
-    font-weight: 600;
-    text-align: center;
-    text-shadow: 4px 4px 5px #FF6347; 
-}
-
-.subtitle  {
-    margin-top: -20px;
-}
-.subtitle h2{
-    font-size: 42px;
-    text-align:center;
-    line-height: 1.5;
-}
-.subtitle .one{
-    font-size: 37px;
-    text-align:right;
-    text-align:center;
-    margin-top: -26px;
-}
-.desc {
-    /* Add styling for the description */
-    font-size: 22px;
-    line-height: 1.5;
-    color: black;
-    font-weight: 600;
-    text-align: center;
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
-/* Additional styling for the logo */
-.right img {
-    width: 100%; /* Make sure the image takes the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Make sure the image doesn't get distorted */
-}
-/* Add this CSS code to your stylesheet or component-specific styling */
-
-.buttons {
-    display: flex;
-    justify-content: space-evenly; 
-    background-color: green;
-}
-
-.btn {
-    position: relative;
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color:orange; 
-    background-color:orangered; 
-    background-color: rgb(245, 115, 1); 
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition effect */
-
-    /* Additional styling, e.g., hover effect */
-}
-
-
-.btn:hover {
-    background-color:  rgb(225, 146, 0);
-    background-color: rgb(234, 62, 0);
-}
-
-/* responsiveness */
-@media screen and (max-width: 968px) {
-    .section-1 {
-        margin-top: 80%;
-        flex-direction: column;
-        padding-top: 40px;
-    }
-
-    .left {
-        margin-bottom: 0;
-        margin-left: 0;
-    }
-    .left .subtitle h2{
-        text-align: center;
-    }
-
-    .right {
-        padding-top: 100px;
-    }
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 .dha-steps{
-    /* height: 70vh; */
-    padding-bottom: 120px;
+    padding: 100px;
     margin-bottom: 0px;
     display: flex;
     flex-direction: column;
@@ -116,9 +8,10 @@
     align-items: center;
 }
 .dha-steps h1{
-    font-size: 50px;
+    font-family: "Inter", sans-serif; ;
     text-align: center;
     color: black;
+    font-size: 50px;
 }
 
 
@@ -130,12 +23,14 @@
 
 
 .arrow-steps .step {
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
-    color:black;
+    color:antiquewhite;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
     cursor: default;
      margin: 80px 0px ;
-   padding: 40px 10px 10px 25px; 
+   padding: 25px 10px 10px 25px; 
     min-width: 310px;
     height: 180px;
     float: left;
@@ -148,22 +43,22 @@
 }
 
 .one-adva {
-    background-color: #FFA07A; /* Light Salmon (replace with your desired orange shade) */
+    background-color:  #e26959;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 
 .two {
-    background-color: #FFC0CB; /* Pink (replace with your desired pink shade) */
+    background-color: #e26959;
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 16% 51%, 0% 0%);
 }
 
 .three {
-    background-color: #FF69B4; /* Hot Pink (replace with your desired pink shade) */
+    background-color:  #e26959;
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 16% 51%, 0% 0%);
 }
 
 .four {
-    background-color: #FF4500; /* OrangeRed (replace with your desired orange shade) */
+    background-color: #e26959;
     clip-path: polygon(100% 0, 100% 50%, 100% 99%, 0% 100%, 25% 50%, 0% 0%);
 }
 
@@ -180,16 +75,16 @@
 .arrow-steps .step span {
     position: relative;
 }
- 
+
 /* respoonsiveness */
 @media screen and (max-width: 968px) {
     .dha-steps {
-        margin-top: 60%;
+        margin-top: 25px;
         flex-direction: column;
     }
     .dha-steps h1{
         text-align: center;
-        font-size: 45px;
+        font-size: 36px;
     }
 }
 .content-overview{
