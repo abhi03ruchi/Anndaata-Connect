@@ -13,10 +13,10 @@ const HomeBanner = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-      
-      };
-    
-      const dullOverlayStyle = {
+
+    };
+
+    const dullOverlayStyle = {
         content: '""',
         position: 'absolute',
         top: 0,
@@ -24,15 +24,15 @@ const HomeBanner = () => {
         bottom: 0,
         left: 0,
         backgroundColor: 'rgba(0, 0, 0, 0.4)', // Adjust the alpha value for the desired opacity
-      };
-      const textContainerStyle = {
+    };
+    const textContainerStyle = {
         zIndex: 100, // Ensure the text is above the overlay
         position: 'relative',
-      };
-    
+    };
+
     return (
         <>
-            <div style={overlayStyle}>
+            <div style={overlayStyle} id="home">
                 <div style={dullOverlayStyle}>
                 </div>
                 <div className="banner_mainparent" style={textContainerStyle}>
@@ -81,14 +81,14 @@ const HomeBanner = () => {
                                             data-cy="landingpage-club-signup"
                                             id="landingpage-club-signup"
                                             variant="solid"
-                                            to="/auth/signup"
+                                            to="/login"
                                         >
                                             Sign up now
                                         </Button>
                                     )}
                                     <Button
                                         className="banner_signup_btn"
-                                        to="https://github.com/MilanCommunity/Milan"
+                                        to="https://github.com/abhi03ruchi/Anndaata-Connect"
                                         target="_blank"
                                         rel="noreferrer"
                                         variant="outline"

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { database } from "../../../FirebaseConfig";
+import { database } from "../../FirebaseConfig";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -41,33 +41,25 @@ function RegisterAndLogin() {
     history("/reset");
   }
   return (
-    <div className="App">
-      {/* Registration and login Screen */}
-      <div className="row">
-        <div
-          className={login == false ? "activeColor" : "pointer"}
-          onClick={() => setLogin(false)}
-        >
-          SignUp
+    <div className='loginstyle'>
+        {/* Blur background image */}
+        <div className="bg"></div>
+        {/* Registeration and login screen */}
+        <div className='row'>
+            <div className={login === false ? 'activeColor' : 'pointer'} onClick={() => setLogin(false)}>
+                SignUp
+            </div>
+            <div className={login === true ? 'activeColor' : 'pointer'} onClick={() => setLogin(true)}>
+                Login
+            </div>
         </div>
-        <div
-          className={login == true ? "activeColor" : "pointer"}
-          onClick={() => setLogin(true)}
-        >
-          SignIn
-        </div>
-      </div>
-      <h1>{login ? "SignIn" : "SignUp"}</h1>
-      <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
-        <input name="email" placeholder="Email" />
-        <br />
-        <input name="password" type="password" placeholder="Password" />
-        <br />
-        <p onClick={handleReset}>Forgot Password?</p>
-        <br />
-        <button>{login ? "SignIn" : "SignUp"}</button>
-      </form>
+        <h1>{login ? 'Log In' : 'Sign Up'} </h1>
+        <form onSubmit={(e) => handleSubmit(e, login ? 'signin' : 'signup')}>
+            <input type="text" name="email" placeholder='Email' /> <br />
+            <input type="password" name="password" placeholder='Password' id="" /> <br /><br />
+            <button className="submitbtn" type="submit">{login ? 'Log In' : 'SignUp'}</button>
+        </form>
     </div>
-  );
+);
 }
 export default RegisterAndLogin;

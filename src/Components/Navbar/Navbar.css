@@ -1,35 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap');
-.navbar-body{
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.15);
-  z-index: 10;
-  top: 0;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  font-size: 17px;
+
+.btnstart{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+  border-radius: 9999px;
+  margin-left: 20px; 
+  color: #ffffff;  
+  background-color: #e26959;
+
 }
-.nav-list{
-  display: none; 
-gap: 2rem; 
-align-items: center; 
-text-transform: uppercase; 
-@media (min-width: 768px) { 
-  display: flex; 
- }
-}
-.nav-li {
-  display: inline-block; 
-padding-left: 0.75rem;
-padding-right: 0.75rem; 
-padding-top: 1.75rem;
-padding-bottom: 1.75rem; 
-font-size: 1.125rem;
-line-height: 1.75rem; 
-font-weight: 600; 
-color:  #28183b; 
-text-decoration: none; 
-}
-.nav-li:hover{
-  color:antiquewhite;
+.btnstart:hover{
+  background-color: antiquewhite;
+  color: #e26959;
 }

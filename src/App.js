@@ -2,7 +2,8 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Scroll  from './Components/GoToTop/GoToTop';
-import RegisterAndLogin from './Pages/Home/register/RegisterAndLogin';
+import RegisterAndLogin from './Pages/register/RegisterAndLogin';
+import Team from '../src/Components/Team/Team';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/login" element={<RegisterAndLogin/>} />
+        </Routes>
+        <Routes>
+          <Route path="/team" element={<Team/>} />
         </Routes>
     </div>
   );

@@ -1,8 +1,8 @@
 import React from "react";
-
+import './Navbar.css';
 const Button = () => {
   return (
-    <button className="text-white  px-6 py-2 rounded-full" style={{backgroundColor :'#e26959'}}>
+    <button className="btnstart">
       Get Started
     </button>
   )
