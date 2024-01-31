@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import './Home.css';
-import goal from '../../Components/assets/goals.png';
+import SustainableGoals from '../../Components/SustainableGoals';
 import { Parallax } from 'react-parallax';
-import group from './groupPic.png';
+import group from '../../Components/assets/groupPic.png';
 import Footer from '../../Components/Footer/Footer'
 import HomeBanner from '../../Components/Banner/HomeBanner';
 import About from '../../Components/About/About';
@@ -22,12 +22,7 @@ const Home = () => {
                 <Stats/>
                 <Features />
                 <About />
-                <div className="section-4">
-                    <div className="custom-typography">
-                        <h2>Sustainable Development Goals</h2>
-                    </div>
-                    <img src={goal} alt="" srcset="" />
-                </div>
+                <SustainableGoals/>
                 <Parallax
                     // blur={{ min: -15, max: 15 }}
                     bgImage={group}

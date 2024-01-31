@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+.bgImg{
+    background-image: url("");
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.box{
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 150px;
+    box-shadow: 25px 25px 45px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cancelbtn{
+    background-color: #f44336;
+    color: white;
+    padding: 14px ;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.8;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cancelbtn:hover{
+    opacity: 1;
+}
+.savebtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px ;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.8;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.savebtn:hover{
+    opacity: 1.8;
+}
+

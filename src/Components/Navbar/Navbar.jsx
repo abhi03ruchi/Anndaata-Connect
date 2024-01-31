@@ -1,17 +1,12 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
   ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
+import Button from './Button'
 
 import Logo from '../assets/name.png'
 const products = [
@@ -51,7 +46,7 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <Popover className="relative">
+          {/* <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
               Product
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
@@ -100,21 +95,20 @@ export default function Example() {
                 </div>
               </Popover.Panel>
             </Transition>
-          </Popover>
+          </Popover> */}
 
-          <a href="/" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/" className="text-lg  leading-6 text-[#28183b] font-sans">
             Home
           </a>
-          <a href="#about" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#about" className="text-lg  leading-6 text-[#28183b] font-sans">
             About
           </a>
-          <a href="/team" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/team" className="text-lg  leading-6 text-[#28183b] font-sans">
             Team
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link to='/login' className="btnstart">  Log In </Link>
-          <Link to='/login' className="btnstart"> Sign Up</Link>
+         <Button/>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

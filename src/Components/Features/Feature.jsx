@@ -3,6 +3,7 @@ import React from 'react'
 import connect from '../assets/connect.png';
 import coordinate from '../assets/coordinate.png';
 import empower from '../assets/emp.png';
+import Make from '../assets/make.jpg';
 const products = [
     {
         id: 1,
@@ -33,7 +34,7 @@ const products = [
         name: 'Make a Difference',
         href: '#',
         para: 'At the core of our mission is the commitment to making a tangible difference in the fight against food wastage and hunger.',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+        imageSrc: Make,
         imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
     // More products...

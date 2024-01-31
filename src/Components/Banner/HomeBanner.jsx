@@ -3,7 +3,7 @@ import "./Banner.css";
 import Cookies from "js-cookie";
 import { ImGithub } from "react-icons/im";
 import Button from "../Button/Button";
-import backgrd from '../../Pages/Home/backgrd.png';
+import backgrd from '../../Components/assets/backgrd.png';
 import Navbar from "../Navbar/Navbar";
 
 const HomeBanner = () => {
