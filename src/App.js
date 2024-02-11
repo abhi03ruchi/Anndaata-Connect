@@ -1,9 +1,16 @@
 import './App.css';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Scroll  from './Components/GoToTop/GoToTop';
-import RegisterAndLogin from './Pages/register/RegisterAndLogin';
-import RegisterForNGO from './Pages/registerforNGO/RegisterAndLogin';
+
+
+import Login from './Pages/RegisterAndLoginforNGO/Login';
+import Registration from './Pages/RegisterAndLoginforNGO/Registration';
+import ProtectedRoute from "./Components/ProtectedRout";
+import UserAuthContextProvider from "./context/UserAuthContext";
+   
+
 import Team from '../src/Components/Team/Team';
 import Donor from '../src/Pages/ProfilePages/donarForm';
 import Admin from '../src/Pages/adminPage/adminList';
@@ -16,11 +23,11 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        <Routes>
+        {/* <Routes>
           <Route path="/loginD" element={<RegisterAndLogin/>} />
-        </Routes>
+        </Routes> */}
         <Routes>
-          <Route path="/loginN" element={<RegisterForNGO/>} />
+          <Route path="/loginN" element={<Login/>} />
         </Routes>
         <Routes>
           <Route path="/team" element={<Team/>} />
@@ -36,6 +43,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/ngoProfile" element={<NGOProfile/>} />
+        </Routes>
+        <Routes>
+          <Route path="/registration" element={<Registration/>} />
         </Routes>
     </div>
   );
