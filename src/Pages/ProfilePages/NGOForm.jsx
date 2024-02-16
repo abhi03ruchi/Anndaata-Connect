@@ -1,75 +1,95 @@
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid';
-import React, { useState } from 'react';
-import ProfileDataService from "../adminPage/admin";
-import { useEffect } from 'react';
+import { UserCircleIcon } from '@heroicons/react/24/solid';
+import React, { useState, useEffect } from 'react';
 import { Alert } from 'react-bootstrap';
 import Banner from "../../Components/Banner";
 import './Form.css';
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { v4 } from "uuid";
+import { imgDB } from "../../FirebaseConfig";
+import ProfileDataService from "../NGOList/admin"; // Assuming this is correctly imported
 
 export default function DonorForm({ id, setRecordId }) {
+    const [img, setImg] = useState('');
+    const [nameOrg, setNameOrg] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [time, setTime] = useState('');
+    const [mealno, setMealno] = useState('');
     const [address, setAddress] = useState('');
-    const [phone, setPhone] = useState('');
-
     const [message, setMessage] = useState({ error: false, msg: "" });
+
+    const handleUpload = async (e) => {
+        const imgFile = e.target.files[0];
+        const imgRef = ref(imgDB, `Imgs/${v4()}`);
+
+        try {
+            await uploadBytes(imgRef, imgFile);
+            const imgUrl = await getDownloadURL(imgRef);
+            setImg(imgUrl);
+        } catch (error) {
+            console.error("Error uploading image:", error);
+        }
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setMessage("");
-        if (name === "" || email === "" || address === "" || phone === "") {
+        setMessage({}); // Clear previous message
+        if (!nameOrg || !name || !email || !time || !mealno || !address) {
             setMessage({ error: true, msg: "All fields are mandatory!" });
             return;
         }
+
         const newRecord = {
+            nameOrg,
             name,
             email,
+            time,
+            mealno,
             address,
-            phone
+            img
         };
-        console.log(newRecord);
 
         try {
-            if (id !== undefined && id !== "") {
-                await ProfileDataService.updateBook(id, newRecord);
+            if (id) {
+                await ProfileDataService.updateName(id, newRecord);
                 setRecordId("");
-                setMessage({ error: false, msg: "Updated successfully!" });
             } else {
                 await ProfileDataService.addName(newRecord);
-                setMessage({ error: false, msg: "New Book added successfully!" });
             }
-        } catch (err) {
-            setMessage({ error: true, msg: err.message });
+            setMessage({ error: false, msg: "Success!" });
+        } catch (error) {
+            setMessage({ error: true, msg: error.message });
         }
 
+        // Reset form fields
+        setNameOrg("");
         setName("");
         setEmail("");
+        setTime("");
+        setMealno("");
         setAddress("");
-        setPhone("");
-    };
-
-    const editHandler = async () => {
-        setMessage("");
-        try {
-            const docSnap = await ProfileDataService.getName(id);
-            console.log("the record is :", docSnap.data());
-            setName(docSnap.data().name);
-            setEmail(docSnap.data().email);
-            setAddress(docSnap.data().address);
-            setPhone(docSnap.data().phone);
-        } catch (err) {
-            setMessage({ error: true, msg: err.message });
-        }
     };
 
     useEffect(() => {
-        console.log("The id here is : ", id);
-        if (id !== undefined && id !== "") {
+        if (id) {
+            const editHandler = async () => {
+                try {
+                    const docSnap = await ProfileDataService.getName(id);
+                    const data = docSnap.data();
+                    setNameOrg(data.nameOrg);
+                    setName(data.name);
+                    setEmail(data.email);
+                    setTime(data.time);
+                    setMealno(data.mealno);
+                    setAddress(data.address);
+                } catch (err) {
+                    console.error("Error fetching data:", err);
+                    setMessage({ error: true, msg: err.message });
+                }
+            };
             editHandler();
         }
     }, [id]);
-
-
 
     return (
         <>
@@ -84,7 +104,7 @@ export default function DonorForm({ id, setRecordId }) {
             )}
 
             <Banner />
-            <form onSubmit={handleSubmit} className='p-[20px] bgImg' >
+            <form onSubmit={handleSubmit} className='p-[60px] bgImg' >
                     <h2 className="text-4xl leading-7 text-gray-900"
                     style={{fontFamily: 'Inter'}}
                     >Profile</h2>
@@ -96,13 +116,10 @@ export default function DonorForm({ id, setRecordId }) {
                                         Logo
                                     </label>
                                     <div className="mt-2 flex items-center gap-x-3">
-                                        <UserCircleIcon className="h-[75px] w-[75px] text-gray-300" aria-hidden="true" />
-                                        <button
-                                            type="button"
-                                            className="rounded-md bg-white px-2.5 py-1.5 text-lg font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                                        >
-                                            Change
-                                        </button>
+                                        <UserCircleIcon className="h-[75px] w-[75px] text-gray-300"  aria-hidden="true"  />
+                                        <input type="file"
+                                        className="rounded-md bg-white px-1.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                         onChange={(e)=>handleUpload(e)}/>
                                     </div>
                                 </div>
                             </div>
@@ -116,10 +133,10 @@ export default function DonorForm({ id, setRecordId }) {
                                     <div className="mt-2">
                                         <input
                                             type="text"
-                                            name="first-name"
-                                            id="first-name"
-                                            value={name}
-                                            onChange={(e) => setName(e.target.value)}
+                                            name="full-name"
+                                            id="full-name"
+                                            value={nameOrg}
+                                            onChange={(e) => setNameOrg(e.target.value)}
                                             autoComplete="given-name"
                                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                         />
@@ -145,15 +162,15 @@ export default function DonorForm({ id, setRecordId }) {
 
                                 <div className="sm:col-span-3">
                                     <label htmlFor="number" className="block text-sm font-medium leading-6 text-gray-900">
-                                        Phone Number
+                                        Name of Person
                                     </label>
                                     <div className="mt-2">
                                         <input
-                                            id="number"
-                                            name="number"
-                                            type="number"
-                                            value={phone}
-                                            onChange={(e) => setPhone(e.target.value)}
+                                              type="text"
+                                              name="first-name"
+                                              id="first-name"
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
                                             autoComplete="number"
                                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                         />
@@ -161,22 +178,25 @@ export default function DonorForm({ id, setRecordId }) {
                                 </div>
 
                                 <div className="sm:col-span-3">
-                                    <label htmlFor="country" className="block text-sm font-medium leading-6 text-gray-900">
-                                        Country
+                                    <label htmlFor="Time" className="block text-sm font-medium leading-6 text-gray-900">
+                                        Time
                                     </label>
                                     <div className="mt-2">
                                         <select
-                                            id="country"
-                                            name="country"
-                                            autoComplete="country-name"
+                                            id="Time"
+                                            name="Time"
+                                            autoComplete="time-name"
                                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                                            value={time}
+                                            onChange={(e) => setTime(e.target.value)}
                                         >
-                                            <option>India</option>
-                                            <option>Canada</option>
-                                            <option>Mexico</option>
+                                            <option>Morning</option>
+                                            <option>AfterNoon</option>
+                                            <option>Evening</option>
                                         </select>
                                     </div>
                                 </div>
+                                
 
                                 <div className="col-span-full">
                                     <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">
@@ -212,7 +232,7 @@ export default function DonorForm({ id, setRecordId }) {
 
                                 <div className="sm:col-span-2">
                                     <label htmlFor="region" className="block text-sm font-medium leading-6 text-gray-900">
-                                        State / Province
+                                        Number of Meals
                                     </label>
                                     <div className="mt-2">
                                         <input
@@ -220,6 +240,8 @@ export default function DonorForm({ id, setRecordId }) {
                                             name="region"
                                             id="region"
                                             autoComplete="address-level1"
+                                            value={mealno}
+                                            onChange={(e) => setMealno(e.target.value)}
                                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                         />
                                     </div>

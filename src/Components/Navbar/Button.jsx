@@ -10,9 +10,9 @@ export default function Example() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-[#e26959] px-5 py-2 text-lg font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-gray-500">
           Register
-          <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+          <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-50  hover:text-gray-500" aria-hidden="true" />
         </Menu.Button>
       </div>
 
@@ -36,7 +36,7 @@ export default function Example() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  for NGO 
+                  NGO 
                 </a>
               )}
             </Menu.Item>
@@ -49,7 +49,7 @@ export default function Example() {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  for individual 
+                  Donors
                 </a>
               )}
             </Menu.Item>

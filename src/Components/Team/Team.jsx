@@ -22,7 +22,7 @@ const Team = () => {
                 </div>
                 <div className='text-center'>
                     <h5 className='text-xl text-gray-800 font-semibold'>Harshita</h5>
-                   <span className='text-sm text-gray-500'>CEO Founder</span>
+                   <span className='text-sm text-gray-500'>Backend Developer</span>
                 </div>
             </div>
             <div className="border-t-4 space-y-8 group text-center">
@@ -31,7 +31,7 @@ const Team = () => {
                 </div>
                 <div className='text-center'>
                     <h5 className='text-xl text-gray-800 font-semibold'>Abhiruchi Sarswat</h5>
-                   <span className='text-sm text-gray-500'>CEO Founder</span>
+                   <span className='text-sm text-gray-500'>Frontend Developer</span>
                 </div>
             </div>
             <div className="border-t-4 space-y-8 group text-center">
@@ -40,7 +40,7 @@ const Team = () => {
                 </div>
                 <div className='text-center'>
                     <h5 className='text-xl text-gray-800 font-semibold'>Tarushi</h5>
-                   <span className='text-sm text-gray-500'>CEO Founder</span>
+                   <span className='text-sm text-gray-500'>Project Manager</span>
                 </div>
             </div>
         </div>

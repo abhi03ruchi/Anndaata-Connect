@@ -1,6 +1,6 @@
 import React , {useEffect , useState} from 'react'
 import './GoToTop.css';
-
+import { ChevronUpIcon } from '@heroicons/react/20/solid'
 
 
 const GoToTop = () => {
@@ -29,8 +29,7 @@ const GoToTop = () => {
         <div className='wrapper'>
             { isVisible && (
             <div className='top-btn' onClick={goTOBtn}>
-               {/* <i class="fa-solid fa-arrow-up fa-bounce fa-xs"></i> */}
-               <p> &#8593; </p>
+               <ChevronUpIcon className=" h-[60px] text-black" aria-hidden="true" />
             </div>
             )}
         </div>

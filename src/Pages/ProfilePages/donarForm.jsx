@@ -90,7 +90,7 @@ export default function DonorForm({ id, setRecordId }) {
             )}
 
             <Banner />
-            <form onSubmit={handleSubmit} className='p-[20px] bgImg' >
+            <form onSubmit={handleSubmit} className='p-[60px] bgImg' >
                     <h2 className="text-4xl leading-7 text-gray-900"
                     style={{fontFamily: 'Inter'}}
                     >Profile</h2>

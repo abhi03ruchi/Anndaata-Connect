@@ -13,19 +13,20 @@ const Registration = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
-  const { registration } = useUserAuth();
+  const { signUp } = useUserAuth();
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      await registration(email, password);
+      await signUp(email, password);
       navigate("/");
     } catch (err) {
       setError(err.message);
     }
   };
+
 
 
   return (
@@ -45,9 +46,8 @@ const Registration = () => {
         <div className=" mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         {error && <Alert variant="danger">{error}</Alert>}
           <form onSubmit = {handleSubmit} className="space-y-6" action="#" method="POST">
-            
             <div >
-              <label htmlFor="email" className="block text-left text-sm font-medium leading-6 text-gray-900">
+              <label htmlFor="email" className="block text-left text-md font-medium leading-6 text-gray-900">
                 Email address
               </label>
               <div className="mt-2">
@@ -65,14 +65,9 @@ const Registration = () => {
             </div>
             <div>
               <div className="flex items-center justify-between">
-                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="password" className="block text-md font-medium leading-6 text-gray-900">
                   Password
                 </label>
-                {/* <div className="text-sm">
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Forgot password?
-                  </a>
-                </div> */}
               </div>
               <div className="mt-2">
                 <input
@@ -91,24 +86,14 @@ const Registration = () => {
             <div>
               <button
                 type="submit"
-                // onClick={handleRegistration}
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-md font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Register
               </button>
             </div>
-
-            {/* {error && <span> Wrong email or password</span>} */}
           </form>
-
-          {/* <p className="mt-10 text-center text-sm text-gray-500">
-            Not a member?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Register
-            </a>
-          </p> */}
-          <p className="mt-10 text-center text-sm text-gray-500">
-            Already have an account? <Link to = "/loginN">Log In</Link>
+          <p className="mt-10 text-center text-lg text-gray-500">
+            Already have an account? <Link to = "/loginN"  className='text-lg text-indigo-600  hover:text-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >Log In</Link>
           </p>
 
         </div>

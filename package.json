@@ -28,6 +28,7 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^10.0.4",
     "styled-components": "^6.1.8",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
