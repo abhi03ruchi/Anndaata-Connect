@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 .bgImg{
     background-image: url("");
-    background-color: aliceblue;
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
+    height: 84vh;
 }
 .box{
     width: 80%;
-    height: 100%;
+    height: 70vh;
     background-color: #fff;
     border-radius: 10px;
     margin-left: 150px;

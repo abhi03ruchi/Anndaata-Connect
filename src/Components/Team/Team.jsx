@@ -2,7 +2,7 @@ import React from 'react'
 import Harshita from '../../Components/assets/harshita.jpg';
 import Abhi from '../../Components/assets/abhi.jpg';
 import Tarushi from '../../Components/assets/tarushi.png';
-import '../../Pages/register/RegisterAndLogin.css'
+import '../../Pages/RegisterAndLoginforNGO/RegisterAndLogin.css'
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 const Team = () => {

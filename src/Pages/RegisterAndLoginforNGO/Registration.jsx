@@ -3,7 +3,7 @@
 //THIS IS FOR REGISTRATION PAGE 
 
 import React, { useState } from 'react';
-import "../RegisterAndLoginforNGO/RegisterAndLogin.css";
+import "./RegisterAndLogin.css";
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { Alert } from "react-bootstrap";
@@ -30,8 +30,8 @@ const Registration = () => {
 
 
   return (
-    <div className='' >
-      <div className="loginstyle flex flex-1 flex-col justify-center ">
+    <div className='loginstyle' >
+      <div className="flex flex-1 flex-col justify-center ">
         <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"

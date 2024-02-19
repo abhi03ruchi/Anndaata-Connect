@@ -10,6 +10,7 @@ import Team from '../src/Components/Team/Team';
 import Donor from '../src/Pages/ProfilePages/donarForm';
 import Admin from '../src/Pages/adminPage/adminList';
 import NGO from '../src/Pages/NGOList/NGOList';
+import Delivery from '../src/Pages/DeliveryPage/Delivery';
 import NGOProfile from '../src/Pages/ProfilePages/NGOForm';
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/ngoList" element={<NGO />} />
           <Route path="/ngoProfile" element={<NGOProfile />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/delivery" element={<Delivery />} />
+
         </Routes>
       </UserAuthContextProvider>
     </div>

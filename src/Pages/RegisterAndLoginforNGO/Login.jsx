@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "./RegisterAndLogin.css";
 import { useUserAuth } from "../../context/UserAuthContext";
 import { Alert } from "react-bootstrap";
-
 import GoogleButton from "react-google-button";
 
 
@@ -38,8 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div className='' >
-      <div className="loginstyle flex flex-1 flex-col justify-center">
+      <div className="loginstyle  flex flex-1 flex-col justify-center">
         <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
@@ -116,7 +114,6 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </div>
   )
 }
 
