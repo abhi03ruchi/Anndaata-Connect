@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+<h1 align="center"> Anndaata-Connect </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  <br>
+ </div>
+    
+## Problem Statement 😖
 
-## Available Scripts
+Many students miss out on the latest job and internship opportunities due to a lack of awareness about them. Often, they become aware of these opportunities when it's already too late to apply. 
+It can be challenging to find verified job and internship opportunities quickly and easily, especially those that are relevant to one's interests and qualifications. 
+This can lead to missed opportunities and a delay in career growth.
 
-In the project directory, you can run:
 
-### `npm start`
+## Proposed Solution 🤩
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Grabbit, a community-driven platform that provides the latest updates about verified job, internship, and hackathon opportunities. 
+#### With Grabbit, students can quickly and easily find opportunities that match their skills and interests. 
+#### Additionally, Grabbit offers a platform for experienced professionals to share their knowledge and insights through podcasts and motivational content, inspiring and guiding students as they pursue their careers.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Glimps ✨
 
-### `npm test`
+### Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Functionality & Concepts Used ⚒
 
-### `npm run build`
+### Frontend: 
+- spider
+### Backend: 
+- spider
+### Programming languages and tools: 
+- spider
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tech Stack Used At Frontend
+![javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![reactjs](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![CSS5](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech Stack Used At Backend
+ <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"> 
 
-### `npm run eject`
+## Our platform features several key concepts and functionalities, including:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- find verified job, internship, and hackathon opportunities quickly and easily. 
+- Our website offers three main sections, namely Jobs, Internships, and Hackathons, where users can browse through different opportunities that match their interests and qualifications.
+- Job portal or career page of the company offering the opportunity, where they can easily apply for the position. This streamlines the application process and saves users time and effort in searching for and applying to multiple job openings.
+- The podcasts featuring successful students who have landed positions in top companies with excellent compensation packages. During these podcasts, the students share their preparation strategies for interviews and valuable tips on how to secure similar opportunities to advance their careers.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Our Goals 🎯
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Our project aligns with several United Nations Sustainable Development Goals, including:
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/47987136/228332340-ab9bd94b-90ba-4ada-81ff-46178ae2ee34.png" alt="image1" width="100"></td>
+    <td><img src="https://user-images.githubusercontent.com/47987136/228332502-60aa94b4-aa59-4524-b05d-24cdafd09f6b.png" alt="image2" width="100"></td>
+    <td><img src="https://user-images.githubusercontent.com/47987136/228332596-93b5fd76-3e4d-4a34-93ad-867f1ad5cb46.png" alt="image3" width="100"></td>
+  </tr>
+</table>
+spider
+- Goal 4: Quality Education
+- Goal 8: Decent Work and Economic Growth
+- Goal 10: Reduced Inequalities
 
-## Learn More
+## Future Scope 🔮
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### In the future, we plan to expand Grabbit's reach by partnering with more companies, universities, and other organizations to provide even more resources and opportunities to our users.
+#### To expand the platform's reach and include more features like a chatbot, personalized job recommendations, and an online learning platform, resume building etc.
+#### To reach a larger audience, we plan to promote the platform on various social media platforms and partner with educational institutions and companies.
+#### We also plan to continue improving our platform's functionality and user experience based on feedback from our users.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Creators 👨🏻‍💻
+Abhiruchi Sarswat
+Harshita
+Tarushi
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ <h1 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !! </h1>
