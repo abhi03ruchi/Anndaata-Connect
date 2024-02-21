@@ -22,6 +22,7 @@ Many students miss out on the latest job and internship opportunities due to a l
 It can be challenging to find verified job and internship opportunities quickly and easily, especially those that are relevant to one's interests and qualifications. 
 This can lead to missed opportunities and a delay in career growth.
 
+---
 
 ## Proposed Solution 🤩
 
@@ -29,8 +30,61 @@ This can lead to missed opportunities and a delay in career growth.
  With Grabbit, students can quickly and easily find opportunities that match their skills and interests. 
  Additionally, Grabbit offers a platform for experienced professionals to share their knowledge and insights through podcasts and motivational content, inspiring and guiding students as they pursue their careers.
 
+---
+
 ## Glimps ✨
  Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
+
+ 
+---
+ ### How To SetUp
+
+To get started with Grabtern Frontend, you'll need to install Node.js and npm on your machine. Then, you can clone this repository and install the dependencies:
+
+- Fork The Repo
+
+```
+you can do this by clicking on the green coloured fork button
+```
+
+- Clone your forked repo
+
+```
+$ git clone https://github.com/your-username/grabtern-frontend.git
+```
+
+- Go to directory
+
+```
+cd grabtern-frontend
+```
+
+- Install Dependencies
+
+```
+npm install
+```
+
+- Start LocalHost Server
+
+```
+npm run dev
+```
+
+This will start the development server on http://localhost:3000/.
+
+---
+
+- And if server stop then
+
+```
+
+npm run build
+```
+
+npm start
+
+This will start server
 
 ## Tech Stack Used
 <div align="center">
