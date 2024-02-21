@@ -6,9 +6,7 @@
   <br>
  </div>
 
-
-## Introduction
-<table style="border: none;">
+<table style="border: none;" align="center" >
   <tr>
     <td><img width="300"  alt="pic1 copy" align='center' src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/bffeff6b6ebced9f6f22b5516287449b120a4ccd/src/Components/assets/logo.png"> </td>
   </tr>
