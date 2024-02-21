@@ -10,7 +10,7 @@
 ## Introduction
 <table style="border: none;">
   <tr>
-    <td text-align:'center'> PCOS SCAN is a cutting-edge software specializing in medical imaging solutions, particularly focused on the detection of Polycystic Ovary Syndrome (PCOS) through ultrasound (USG) scan images </td>
+    <td text-align:'center'> Anndaata Intro </td>
     <td><img width="300"  alt="pic1 copy" align='center' src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/bffeff6b6ebced9f6f22b5516287449b120a4ccd/src/Components/assets/logo.png"> </td>
   </tr>
 </table>
