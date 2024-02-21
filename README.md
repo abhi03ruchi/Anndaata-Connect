@@ -1,4 +1,11 @@
-<h1 align="center"> Anndaata-Connect </h1>
+## Introduction
+<table style="border: none;">
+  <tr>
+    <td text-align:'center'> PCOS SCAN is a cutting-edge software specializing in medical imaging solutions, particularly focused on the detection of Polycystic Ovary Syndrome (PCOS) through ultrasound (USG) scan images </td>
+    <td><img width="300"  alt="pic1 copy" align='center' src="https://github.com/abhi03ruchi/PCOS_SCAN/assets/105661636/fe9ec171-fb43-4587-a24c-919520c46be5"> </td>
+  </tr>
+</table>
+
 
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
@@ -24,23 +31,12 @@ This can lead to missed opportunities and a delay in career growth.
 
 ### Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
 
-## Functionality & Concepts Used ⚒
 
-### Frontend: 
-- spider
-### Backend: 
-- spider
-### Programming languages and tools: 
-- spider
-
-
-### Tech Stack Used At Frontend
+### Tech Stack Used
 ![javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![reactjs](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![CSS5](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
-### Tech Stack Used At Backend
  <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"> 
 
 ## Our platform features several key concepts and functionalities, including:
@@ -62,9 +58,7 @@ Our project aligns with several United Nations Sustainable Development Goals, in
   </tr>
 </table>
 spider
-- Goal 4: Quality Education
-- Goal 8: Decent Work and Economic Growth
-- Goal 10: Reduced Inequalities
+
 
 ## Future Scope 🔮
 
