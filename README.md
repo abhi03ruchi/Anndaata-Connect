@@ -25,21 +25,21 @@ This can lead to missed opportunities and a delay in career growth.
 
 ## Proposed Solution 🤩
 
-#### Grabbit, a community-driven platform that provides the latest updates about verified job, internship, and hackathon opportunities. 
-#### With Grabbit, students can quickly and easily find opportunities that match their skills and interests. 
-#### Additionally, Grabbit offers a platform for experienced professionals to share their knowledge and insights through podcasts and motivational content, inspiring and guiding students as they pursue their careers.
+ Grabbit, a community-driven platform that provides the latest updates about verified job, internship, and hackathon opportunities. 
+ With Grabbit, students can quickly and easily find opportunities that match their skills and interests. 
+ Additionally, Grabbit offers a platform for experienced professionals to share their knowledge and insights through podcasts and motivational content, inspiring and guiding students as they pursue their careers.
 
 ## Glimps ✨
+ Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
 
-### Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
-
-
-### Tech Stack Used
+## Tech Stack Used
+<div align="center">
 ![javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![reactjs](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![CSS5](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
  <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"> 
+</div>
 
 ## Our platform features several key concepts and functionalities, including:
 
@@ -64,10 +64,10 @@ spider
 
 ## Future Scope 🔮
 
-#### In the future, we plan to expand Grabbit's reach by partnering with more companies, universities, and other organizations to provide even more resources and opportunities to our users.
-#### To expand the platform's reach and include more features like a chatbot, personalized job recommendations, and an online learning platform, resume building etc.
-#### To reach a larger audience, we plan to promote the platform on various social media platforms and partner with educational institutions and companies.
-#### We also plan to continue improving our platform's functionality and user experience based on feedback from our users.
+In the future, we plan to expand Grabbit's reach by partnering with more companies, universities, and other organizations to provide even more resources and opportunities to our users.
+To expand the platform's reach and include more features like a chatbot, personalized job recommendations, and an online learning platform, resume building etc.
+To reach a larger audience, we plan to promote the platform on various social media platforms and partner with educational institutions and companies.
+We also plan to continue improving our platform's functionality and user experience based on feedback from our users.
 
 ## Creators 👨🏻‍💻
 Abhiruchi Sarswat
