@@ -21,7 +21,7 @@ const Registration = () => {
     setError("");
     try {
       await signUp(email, password);
-      navigate("/");
+      navigate("#ourServices");
     } catch (err) {
       setError(err.message);
     }

@@ -44,6 +44,9 @@ export default function Example() {
           <a href="#about" className="text-lg  leading-6 text-[#28183b] font-sans">
             About
           </a>
+          <a href="#ourServices" className="text-lg  leading-6 text-[#28183b] font-sans">
+            Services
+          </a>
           <a href="/team" className="text-lg  leading-6 text-[#28183b] font-sans">
             Team
           </a>

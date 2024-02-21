@@ -5,7 +5,8 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
-import ProfileDataService from "../NGOList/admin";
+import { database } from '../../FirebaseConfig'
+import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore'
 
 const people = [
     {
@@ -70,17 +71,20 @@ const people = [
     },
 ]
 
-const NGOList = ({ getRecordId }) => {
-    const [user, setUser] = useState([]);
+const NGOList = () => {
+    const [val, setVal] = useState([])
+
+    const value = collection(database, "ngoAdmin")
+
 
     useEffect(() => {
-        getUser();
-    }, []);
+        const getData = async () => {
+            const dbVal = await getDocs(value)
+            setVal(dbVal.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+        }
+        getData()
+    })
 
-    const getUser = async () => {
-        const data = await ProfileDataService.getNames();
-        setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
 
 
     return (
@@ -138,29 +142,29 @@ const NGOList = ({ getRecordId }) => {
                             </li>
                         ))}
 
-                        {user.map((doc, index) => (
-                            <li key={index} className="flex justify-between gap-x-6 py-5">
+                        {val.map((values) => (
+                            <li  className="flex justify-between gap-x-6 py-5">
                                 <div className=" flex min-w-0 gap-x-4">
-                                    <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={doc.imageUrl} />
+                                    <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={values.imageUrl} />
                                     <div className="min-w-0 flex-auto">
-                                        <p className="text-sm font-semibold leading-6 text-gray-900">{doc.name}</p>
+                                        <p className="text-sm font-semibold leading-6 text-gray-900">{values.name}</p>
                                         <div className="flex flex-row items-center justify-start">
                                             <FaBasketShopping />
-                                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">{doc.mealno}</p>
+                                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">{values.mealno}</p>
                                         </div>
                                         <div className="flex flex-row items-center justify-start text-xs leading-5 text-gray-500">
                                             <FaLocationDot />
-                                            <div className="">{doc.address} </div>
+                                            <div className="">{values.address} </div>
                                         </div>
                                         <div className="flex flex-row items-center justify-start text-xs leading-5 text-gray-500">
                                             <FaRegClock />
-                                            <div className="">{doc.time} </div>
+                                            <div className="">{values.time} </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                                    <p className="text-sm leading-6 text-gray-900">{doc.nameOrg}</p>
-                                    <p className="text-xs leading-5 text-gray-500">{doc.email}</p>
+                                    <p className="text-sm leading-6 text-gray-900">{values.nameOrg}</p>
+                                    <p className="text-xs leading-5 text-gray-500">{values.email}</p>
                                     <p className=" flex flex-col mt-1 text-xs leading-5 text-gray-500">
                                         <Link to="/delivery" className="text-[#e26959] hover:text-[orangered]">
                                             <FaCircleArrowRight className="text-xl" href="/delivery" />

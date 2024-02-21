@@ -22,12 +22,12 @@ const Footer = () => {
                             </h2>
                             <ul className="text-gray-50  font-medium">
                                 <li className="mb-4">
-                                    <a href="https://flowbite.com/" className="hover:underline">
+                                    <a href="/team" className="hover:underline">
                                         Team
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://tailwindcss.com/" className="hover:underline">
+                                    <a href="#ourServices" className="hover:underline">
                                         Services
                                     </a>
                                 </li>
@@ -40,7 +40,7 @@ const Footer = () => {
                             <ul className="text-gray-50  font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/themesberg/flowbite"
+                                        href="/loginN"
                                         className="hover:underline "
                                     >
                                         Login
@@ -48,7 +48,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="https://discord.gg/4eeurUVvTy"
+                                        href="/registration"
                                         className="hover:underline"
                                     >
                                         Register
@@ -120,7 +120,7 @@ const Footer = () => {
                             <span className="sr-only">Twitter page</span>
                         </a>
                         <a
-                            href="#"
+                            href="https://github.com/abhi03ruchi/Anndaata-Connect/"
                             className="text-[#e26959] hover:text-gray-50 ms-5"
                         >
                             <svg

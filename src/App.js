@@ -27,7 +27,6 @@ function App() {
           <Route path="/ngoProfile" element={<NGOProfile />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/delivery" element={<Delivery />} />
-
         </Routes>
       </UserAuthContextProvider>
     </div>

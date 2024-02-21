@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
+
 const OurServices = () => {
     return (
         <div id="ourServices" className="h-[100%] lg:h-[100vh] relative lg:p-20 lg:ml-20 lg:mr-20">
@@ -32,7 +33,7 @@ const OurServices = () => {
                             <p className="text-xs lg:text-base px-20 lg:px-10 py-5 lg:p-3">
                                 The service provides a seamless connection between individuals and restaurants with surplus food to spare, and NGOs dedicated to supporting the underprivileged.{" "}
                             </p>
-                            <Link to="/auth">
+                            <Link to="/ngoProfile">
                                 <div className="md:block hidden">
                                     <Button />
                                 </div>
@@ -56,7 +57,7 @@ const OurServices = () => {
                             <p className="text-xs lg:text-base px-20 lg:px-10 py-5 lg:p-3">
                                 The service empowers individuals hosting events, such as weddings or functions, to effortlessly contribute their excess food to the less fortunate{" "}
                             </p>
-                            <Link to="/auth">
+                            <Link to="/donorProfile">
                                 <div className="md:block hidden">
                                     <Button />
                                 </div>
