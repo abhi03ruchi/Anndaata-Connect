@@ -10,7 +10,6 @@
 ## Introduction
 <table style="border: none;">
   <tr>
-    <td text-align:'center'> 'Anndaata Connect', is a web application designed to combat food wastage and hunger by connecting restaurants, event hosts, and individuals with surplus food to NGOs and individuals in need. Through seamless technology integration, we aim to foster a community where every meal contributes to positive change, creating a sustainable and inclusive future for all. </td>
     <td><img width="300"  alt="pic1 copy" align='center' src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/bffeff6b6ebced9f6f22b5516287449b120a4ccd/src/Components/assets/logo.png"> </td>
   </tr>
 </table>
