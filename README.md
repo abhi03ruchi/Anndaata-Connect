@@ -75,17 +75,6 @@ This will start the development server on http://localhost:3000/.
 
 ---
 
-- And if server stop then
-
-```
-
-npm run build
-```
-
-npm start
-
-This will start server
-
 ## Tech Stack Used
 <div align="center">
  <img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
@@ -107,9 +96,10 @@ This will start server
 Our project aligns with several United Nations Sustainable Development Goals, including:
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/47987136/228332340-ab9bd94b-90ba-4ada-81ff-46178ae2ee34.png" alt="image1" width="100"></td>
-    <td><img src="https://user-images.githubusercontent.com/47987136/228332502-60aa94b4-aa59-4524-b05d-24cdafd09f6b.png" alt="image2" width="100"></td>
-    <td><img src="https://user-images.githubusercontent.com/47987136/228332596-93b5fd76-3e4d-4a34-93ad-867f1ad5cb46.png" alt="image3" width="100"></td>
+    <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/2.png" alt="image3" width="100"></td>
+    <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/3.png" alt="image3" width="100"></td>
+    <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/12.png" alt="image3" width="100"></td>
+    <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/13.png" alt="image3" width="100"></td>
   </tr>
 </table>
 spider
