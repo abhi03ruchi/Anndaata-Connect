@@ -1,3 +1,12 @@
+
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+  <br>
+ </div>
+
+
 ## Introduction
 <table style="border: none;">
   <tr>
@@ -6,13 +15,6 @@
   </tr>
 </table>
 
-
-<div align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
-  <br>
- </div>
     
 ## Problem Statement 😖
 
