@@ -26,7 +26,7 @@ Anndaata Connect, a platform that facilitates the efficient redistribution of su
 ---
 
 ## Glimps ✨
- Check out the live demo of the platform  [GrabBit](https://grabbits.vercel.app)
+ Check out the live demo of the platform  [Anndaata Connect](https://anndaata-connect.vercel.app/)
 
  
 ---
