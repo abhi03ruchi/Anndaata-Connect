@@ -18,7 +18,7 @@ const Home = () => {
             <div>
                 <Navbar />
                 <HomeBanner />
-                <OurServices/>
+                {/* <OurServices/> */}
                 <Stats/>
                 <Features />
                 <About />

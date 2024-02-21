@@ -1,11 +1,15 @@
 import React from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 
 const OurServices = () => {
     return (
-        <div id="ourServices" className="h-[100%] lg:h-[100vh] relative lg:p-20 lg:ml-20 lg:mr-20">
+        <>
+        <Navbar/>
+        <div id="ourServices" className="h-[100%] bg-[whitesmoke] lg:h-[100vh] relative lg:p-20 lg:ml-20 lg:mr-20">
             <div className="relative z-[5]">
                 {/* Title */}
                 <div className='mb-12 space-y-4 text-center'>
@@ -70,6 +74,8 @@ const OurServices = () => {
             {/* BG-Gradients */}
             <div className="absolute circleGradient-peach w-[670px] h-[570px] top-[220px] left-[475px] z-0 blur-xl"></div>
         </div>
+        <Footer/>
+        </>
     );
 };
 

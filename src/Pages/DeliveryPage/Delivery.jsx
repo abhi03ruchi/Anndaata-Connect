@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import delivery from '../../Components/assets/delivery.jpg'
 import { database } from '../../FirebaseConfig'
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom';
 
 function Delivery() {
 
@@ -15,6 +16,8 @@ function Delivery() {
     const [phone, setphone] = useState('')
     const [time, settime] = useState('')
     const [id, setId] = useState('')
+    const navigate = useNavigate();
+    
 
     const [show, setShow] = useState(false)
 
@@ -37,6 +40,9 @@ function Delivery() {
         setdeliveryLocation("")
         setphone("")
         settime("")
+
+         // After the item is created, navigate to the next page
+         navigate('/'); // Replace '/next-page' with the path of the next page
     }
 
     const handleUpdate = async () => {
@@ -75,7 +81,7 @@ function Delivery() {
                                 Confirm Food Details
                             </label>
                             <div className="mt-2.5">
-                            {personData ? (
+                            {/* {personData ? (
                                 <>
                                     <h2>Name: {personData.name}</h2>
                                     <p>Meal Number: {personData.mealno}</p>
@@ -86,7 +92,7 @@ function Delivery() {
                                 </>
                             ) : (
                                 <div>No data available</div>
-                            )}
+                            )} */}
                         </div>
                         </div>
 

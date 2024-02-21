@@ -44,7 +44,7 @@ export default function Example() {
           <a href="#about" className="text-lg  leading-6 text-[#28183b] font-sans">
             About
           </a>
-          <a href="#ourServices" className="text-lg  leading-6 text-[#28183b] font-sans">
+          <a href="/services" className="text-lg  leading-6 text-[#28183b] font-sans">
             Services
           </a>
           <a href="/team" className="text-lg  leading-6 text-[#28183b] font-sans">
@@ -80,19 +80,25 @@ export default function Example() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
             <a
-                  href="#"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Home
                 </a>
                 <a
-                  href="#"
+                  href="#about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
                 </a>
                 <a
-                  href="#"
+                  href="/services"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Services
+                </a>
+                <a
+                  href="/team"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Team

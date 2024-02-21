@@ -12,7 +12,7 @@ const Team = () => {
       <div className='container mx-auto px-6 md:px-12 lg:px-8'>
         <div className='mb-12 space-y-4 text-center'>
             <h1 className='mt-[100px] text-5xl font-bold text-gray-900 md:text-5xl'>Our Team </h1>
-            <p className='text-xl text-gray-600'>We are a team of passionate individuals who believe in the power of technology to transform the world. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellendus aperiam quo cum. Corrupti nam quod nobis cum soluta doloribus sequi praesentium asperiores odio odit!</p>
+            <p className='text-xl text-gray-600'>We are a team of passionate individuals who believe in the power of technology to transform the world.</p>
         </div>
 
         <div className="py-20 grid gap-28 md:grid-cols-3">

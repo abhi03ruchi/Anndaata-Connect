@@ -20,7 +20,7 @@ const Login = () => {
     setError("");
     try {
       await logIn(email, password);
-      navigate("#ourServices");
+      navigate("/services");
     } catch (err) {
       setError(err.message);
     }
@@ -30,7 +30,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await googleSignIn();
-      navigate("#ourServices");
+      navigate("/services");
     } catch (error) {
       console.log(error.message);
     }
@@ -102,13 +102,13 @@ const Login = () => {
             {error && <span> Wrong email or password</span>}
           </form>
           <hr />
-          <div className='flex justify-center  px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm '>
+          {/* <div className='flex justify-center  px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm '>
             <GoogleButton
               className="w-full"
               type="dark"
               onClick={handleGoogleSignIn}
             />
-          </div>
+          </div> */}
           <p className="mt-10 text-center text-lg text-gray-500">
             Don't have an account? <Link to="/registration" className='text-lg text-indigo-600  hover:text-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Register </Link>
           </p>

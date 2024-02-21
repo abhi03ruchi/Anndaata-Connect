@@ -12,6 +12,7 @@ import Admin from '../src/Pages/adminPage/adminList';
 import NGO from '../src/Pages/NGOList/NGOList';
 import Delivery from '../src/Pages/DeliveryPage/Delivery';
 import NGOProfile from '../src/Pages/ProfilePages/NGOForm';
+import Services from '../src/Components/Services/OurServices';
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,7 @@ function App() {
           <Route path="/ngoProfile" element={<NGOProfile />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/delivery" element={<Delivery />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </UserAuthContextProvider>
     </div>
