@@ -122,10 +122,10 @@ To expand the platform's reach and include more features like a chatbot, persona
 To reach a larger audience, we plan to promote the platform on various social media platforms and partner with educational institutions and companies.
 We also plan to continue improving our platform's functionality and user experience based on feedback from our users.
 
-## Creators 👨🏻‍💻
-Abhiruchi Sarswat
-Harshita
-Tarushi
+## Author 👨🏻‍💻
 
+[ABHIRUCHI SARSWAT](https://github.com/abhi03ruchi) <br/>
+[harshita](https://github.com/harshita099) <br/>
+[tarushi](https://github.com/Tarushi-igdtuw)
 
  <h1 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !! </h1>
