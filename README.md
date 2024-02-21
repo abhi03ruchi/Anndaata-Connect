@@ -18,17 +18,13 @@
     
 ## Problem Statement 😖
 
-Many students miss out on the latest job and internship opportunities due to a lack of awareness about them. Often, they become aware of these opportunities when it's already too late to apply. 
-It can be challenging to find verified job and internship opportunities quickly and easily, especially those that are relevant to one's interests and qualifications. 
-This can lead to missed opportunities and a delay in career growth.
+In today's world, despite advancements in various sectors, food wastage and hunger persist as critical issues affecting communities worldwide. The inefficiencies in food distribution systems lead to a significant portion of edible food being wasted, while millions continue to suffer from hunger. This not only waste precious resources but also worsen environmental degradation through unnecessary production and disposal. Restaurants, events, and even individuals sometimes end up with more food than they can use, and instead of sharing it with those who need it, it just gets thrown away. This waste is not only bad for the environment but also means that people who could benefit from that food miss out.
 
 ---
 
 ## Proposed Solution 🤩
 
- Grabbit, a community-driven platform that provides the latest updates about verified job, internship, and hackathon opportunities. 
- With Grabbit, students can quickly and easily find opportunities that match their skills and interests. 
- Additionally, Grabbit offers a platform for experienced professionals to share their knowledge and insights through podcasts and motivational content, inspiring and guiding students as they pursue their careers.
+Anndaata Connect, a platform that facilitates the efficient redistribution of surplus food by connecting the dots between surplus food and those who need it most to ensure that no edible food goes to waste. By using technology to create a platform where restaurants, event organizers, and individuals can easily donate their excess food, we can ensure that it goes to people who would otherwise go hungry. This not only reduces food waste but also helps to alleviate hunger.
 
 ---
 
