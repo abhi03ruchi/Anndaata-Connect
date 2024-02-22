@@ -59,7 +59,6 @@ export default function DonorForm() {
         setMealno("")
         setTime("")
 
-        // After the item is created, navigate to the next page
         navigate('/ngoList'); // Replace '/next-page' with the path of the next page
     }
 

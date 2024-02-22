@@ -5,13 +5,13 @@ import { useEffect } from 'react';
 import { Alert } from 'react-bootstrap';
 import Banner from "../../Components/Banner";
 import './Form.css';
-
+import { useNavigate } from 'react-router-dom';
 export default function DonorForm({ id, setRecordId }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
     const [phone, setPhone] = useState('');
-
+    const navigate = useNavigate();
     const [message, setMessage] = useState({ error: false, msg: "" });
 
     const handleSubmit = async (e) => {
@@ -46,6 +46,8 @@ export default function DonorForm({ id, setRecordId }) {
         setEmail("");
         setAddress("");
         setPhone("");
+
+        navigate('/ngoList');
     };
 
     const editHandler = async () => {
