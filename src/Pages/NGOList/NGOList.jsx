@@ -7,69 +7,55 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { database } from '../../FirebaseConfig'
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore'
-
 const people = [
     {
-        name: 'Ngo Person Name',
+        name: 'John Doe',
         mealno: '29 meals',
-        role: 'NGO Name',
-        emailId: 'abc.gmail.com',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        location: 'New Delhi ',
+        role: 'Anndaata Foundation',
+        emailId: 'john.doe@example.com',
+        imageUrl: 'https://randomuser.me/api/portraits/men/1.jpg',
+        location: 'New Delhi',
         time: 'Morning'
     },
     {
-        name: 'Michael Foster',
+        name: 'Jane Smith',
         mealno: '19 meals',
-        emailId: 'abc.gmail.com',
-        role: 'Co-Founder / CTO',
-        imageUrl:
-            'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        location: 'New Delhi ',
+        role: 'Save Food NGO',
+        emailId: 'jane.smith@example.com',
+        imageUrl: 'https://randomuser.me/api/portraits/women/2.jpg',
+        location: 'New Delhi',
         time: 'Morning'
     },
     {
-        name: 'Dries Vincent',
+        name: 'Alice Johnson',
         mealno: '19 meals',
-        emailId: 'abc.gmail.com',
-        role: 'Business Relations',
-        imageUrl:
-            'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        location: 'New Delhi ',
+        role: 'Food for All Foundation',
+        emailId: 'alice.johnson@example.com',
+        imageUrl: 'https://randomuser.me/api/portraits/women/3.jpg',
+        location: 'New Delhi',
         time: 'Morning'
     },
     {
-        name: 'Lindsay Walton',
-        mealno: '19 meals',
-        emailId: 'abc.gmail.com',
-        role: 'Front-end Developer',
-        imageUrl:
-            'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        location: 'New Delhi ',
+        name: 'Michael Williams',
+        mealno: '25 meals',
+        role: 'Hunger Relief Team',
+        emailId: 'michael.williams@example.com',
+        imageUrl: 'https://randomuser.me/api/portraits/men/4.jpg',
+        location: 'New Delhi',
         time: 'Morning'
     },
     {
-        name: 'Courtney Henry',
-        mealno: '19 meals',
-        role: 'Designer',
-        emailId: 'abc.gmail.com',
-        imageUrl:
-            'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        location: 'New Delhi ',
+        name: 'Emily Davis',
+        mealno: '15 meals',
+        role: 'Food Support Network',
+        emailId: 'emily.davis@example.com',
+        imageUrl: 'https://randomuser.me/api/portraits/women/5.jpg',
+        location: 'New Delhi',
         time: 'Morning'
     },
-    {
-        name: 'Tom Cook',
-        mealno: '19 meals',
-        emailId: 'abc.gmail.com',
-        role: 'Director of Product',
-        imageUrl:
-            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        location: 'New Delhi ',
-        time: 'Morning'
-    },
-]
+];
+
+
 
 const NGOList = () => {
     const [val, setVal] = useState([])
