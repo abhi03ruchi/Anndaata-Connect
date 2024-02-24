@@ -107,8 +107,8 @@ We also plan to continue improving our platform's functionality and user experie
 
 ## Author 👨🏻‍💻
 
-[ABHIRUCHI SARSWAT](https://github.com/abhi03ruchi) <br/>
-[harshita](https://github.com/harshita099) <br/>
-[tarushi](https://github.com/Tarushi-igdtuw)
+[Abhiruchi Sarswat](https://github.com/abhi03ruchi) <br/>
+[Harshita](https://github.com/harshita099) <br/>
+[Tarushi](https://github.com/Tarushi-igdtuw)
 
- <h1 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !! </h1>
+ <h1 align="center"> Show some  ❤️ BY 🌟 this awesome repository! </h1>
