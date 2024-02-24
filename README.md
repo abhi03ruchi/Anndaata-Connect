@@ -32,7 +32,7 @@ Anndaata Connect, a platform that facilitates the efficient redistribution of su
 ---
  ### How To SetUp
 
-To get started with Grabtern Frontend, you'll need to install Node.js and npm on your machine. Then, you can clone this repository and install the dependencies:
+To get started with Anndaata Connect , you'll need to install Node.js and npm on your machine. Then, you can clone this repository and install the dependencies:
 
 - Fork The Repo
 
@@ -43,13 +43,13 @@ you can do this by clicking on the green coloured fork button
 - Clone your forked repo
 
 ```
-$ git clone https://github.com/your-username/grabtern-frontend.git
+$ git clone https://github.com/your-username/Anndaata-Connect.git
 ```
 
 - Go to directory
 
 ```
-cd grabtern-frontend
+cd Anndaata-Connect
 ```
 
 - Install Dependencies
@@ -74,7 +74,7 @@ This will start the development server on http://localhost:3000/.
  <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge">
  <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"> 
 </div>
- 
+
 
 ## Our platform features several key concepts and functionalities, including:
 
@@ -82,7 +82,6 @@ This will start the development server on http://localhost:3000/.
 - Our website offers three main sections, namely Jobs, Internships, and Hackathons, where users can browse through different opportunities that match their interests and qualifications.
 - Job portal or career page of the company offering the opportunity, where they can easily apply for the position. This streamlines the application process and saves users time and effort in searching for and applying to multiple job openings.
 - The podcasts featuring successful students who have landed positions in top companies with excellent compensation packages. During these podcasts, the students share their preparation strategies for interviews and valuable tips on how to secure similar opportunities to advance their careers.
-
 
 ## Our Goals 🎯
 
@@ -93,8 +92,6 @@ Our project aligns with several United Nations Sustainable Development Goals, in
     <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/12.png" alt="image3" width="100"></td>
   </tr>
 </table>
-spider
-
 
 ## Future Scope 🔮
 
