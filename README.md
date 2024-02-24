@@ -90,9 +90,7 @@ Our project aligns with several United Nations Sustainable Development Goals, in
 <table>
   <tr align="center" >
     <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/2.png" alt="image3" width="100"></td>
-    <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/3.png" alt="image3" width="100"></td>
     <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/12.png" alt="image3" width="100"></td>
-    <td><img src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/694b2c9be3d5874e57a2320b7e78dc57bc8f44c8/src/Components/assets/13.png" alt="image3" width="100"></td>
   </tr>
 </table>
 spider
@@ -111,4 +109,4 @@ We also plan to continue improving our platform's functionality and user experie
 [Harshita](https://github.com/harshita099) <br/>
 [Tarushi](https://github.com/Tarushi-igdtuw)
 
- <h1 align="center"> Show some  ❤️ BY 🌟 this awesome repository! </h1>
+ <h3 align="center"> Show some  ❤️ BY 🌟 this awesome repository! </h3>
