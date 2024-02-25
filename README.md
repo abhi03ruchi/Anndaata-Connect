@@ -95,10 +95,10 @@ Our project aligns with several United Nations Sustainable Development Goals, in
 
 ## Future Scope 🔮
 
-In the future, we plan to expand Grabbit's reach by partnering with more companies, universities, and other organizations to provide even more resources and opportunities to our users.
-To expand the platform's reach and include more features like a chatbot, personalized job recommendations, and an online learning platform, resume building etc.
-To reach a larger audience, we plan to promote the platform on various social media platforms and partner with educational institutions and companies.
-We also plan to continue improving our platform's functionality and user experience based on feedback from our users.
+- The future of "Anndaata Connect" involves implementing a machine learning model to automatically match donors and recipients based on factors such as location, food type, and need. This will streamline the process and ensure the best possible matches, enhancing efficiency and effectiveness.
+- In addition to ML integration, expanding our solution to reach a larger audience involves strategic partnerships with more restaurants, event hosts, and NGOs across Delhi. Collaborations with government agencies, community organizations, and corporate sponsors can also broaden our reach and impact.
+- We also plan to continue improving our platform's functionality and user experience based on feedback from our users.
+
 
 ## Author 👨🏻‍💻
 
