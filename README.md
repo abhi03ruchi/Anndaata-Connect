@@ -78,10 +78,11 @@ This will start the development server on http://localhost:3000/.
 
 ## Our platform features several key concepts and functionalities, including:
 
-- find verified job, internship, and hackathon opportunities quickly and easily. 
-- Our website offers three main sections, namely Jobs, Internships, and Hackathons, where users can browse through different opportunities that match their interests and qualifications.
-- Job portal or career page of the company offering the opportunity, where they can easily apply for the position. This streamlines the application process and saves users time and effort in searching for and applying to multiple job openings.
-- The podcasts featuring successful students who have landed positions in top companies with excellent compensation packages. During these podcasts, the students share their preparation strategies for interviews and valuable tips on how to secure similar opportunities to advance their careers.
+- Surplus food listing for easy donation management.
+- NGO profile creation for specific food requests.
+- Secure user authentication and authorization.
+- Scalable infrastructure with Firebase services.
+- Customizable and extensible platform design.
 
 ## Our Goals 🎯
 
