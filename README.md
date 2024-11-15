@@ -68,6 +68,7 @@ This will start the development server on http://localhost:3000/.
 
 ---
 
+
 ## Tech Stack Used
 <div align="center">
  <img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
@@ -101,10 +102,17 @@ Our project aligns with several United Nations Sustainable Development Goals, in
 - We also plan to continue improving our platform's functionality and user experience based on feedback from our users.
 
 
-## Author 👨🏻‍💻
 
-[Abhiruchi Sarswat](https://github.com/abhi03ruchi) <br/>
-[Harshita](https://github.com/harshita099) <br/>
-[Tarushi](https://github.com/Tarushi-igdtuw)
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
 
  <h3 align="center"> Show some  ❤️ BY 🌟 this awesome repository! </h3>
