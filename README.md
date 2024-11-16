@@ -6,6 +6,33 @@
   <br>
  </div>
 
+ <div align = "center">
+
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/abhi03ruchi/Anndaata-Connect?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<hr>
+
 <table style="border: none;" align="center" >
   <tr>
     <td><img width="300"  alt="pic1 copy" align='center' src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/bffeff6b6ebced9f6f22b5516287449b120a4ccd/src/Components/assets/logo.png"> </td>
