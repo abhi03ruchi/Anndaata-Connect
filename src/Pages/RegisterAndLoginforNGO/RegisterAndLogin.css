@@ -2,10 +2,9 @@
 
 .loginstyle {
     position: relative; 
-    margin-left: 500px ;
-    margin-right: 500px ;
-    margin-top: 30px;
+    margin: 30px auto;
     padding: 60px;
+    max-width: 600px;
     border-radius: 10px;
     background-color: whitesmoke;
     box-shadow:
@@ -14,6 +13,13 @@
     0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075),
     0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+.logoImage {
+    height: 6rem; /* Increase the height to make the logo bigger */
+    width: auto;
+    display: block;
+    margin: 0 auto 20px;
 }
 
 /* Login.css */
@@ -32,7 +38,7 @@
 h1 {
     text-align: center;
     margin-bottom: 30px; /* Adjust margin for better spacing */
-    font-size: 50px; /* Increase font size for the heading */
+    font-size: 2.5rem; /* Increase font size for the heading */
 }
 
 .row {
@@ -45,16 +51,14 @@ h1 {
     padding: 5px;
     height: 100px;
     width: 100px; /* Adjust the width as needed */
-    /* border: 2px solid grey; */
     cursor: pointer;
     margin: 0 5px; /* Add some spacing between the buttons */
-    font-size: 25px; /* Increase font size for the buttons */
+    font-size: 1.25rem; /* Increase font size for the buttons */
 }
 
 .row .activeColor {
     padding-top: 5px;
-    height:   50px;
-    /* border: 2px solid grey; */
+    height: 50px;
     cursor: pointer;
     background-color: #3498db; /* Add a background color to the active button */
     color: white; /* Set text color to white for better visibility */
@@ -68,7 +72,7 @@ form input {
     margin-bottom: 30px; /* Increase spacing between the inputs */
     padding: 10px; /* Increase padding for better input styling */
     width: 100%; /* Make the input fields full-width */
-    font-size: 18px; /* Increase font size for the input fields */
+    font-size: 1.125rem; /* Increase font size for the input fields */
 }
 
 .submitbtn {
@@ -78,7 +82,7 @@ form input {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 25px; /* Increase font size for the button */
+    font-size: 1.25rem; /* Increase font size for the button */
 }
 
 .submitbtn:hover {
