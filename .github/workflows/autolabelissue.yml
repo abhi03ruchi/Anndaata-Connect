@@ -22,4 +22,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         labels: |
           SWOC
+          BEGINNER
           
