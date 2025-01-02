@@ -22,7 +22,7 @@ const Registration = () => {
     setError("");
     try {
       await signUp(email, password);
-      navigate("/loginN");
+      navigate("/login");
     } catch (err) {
       setError(err.message);
     }
@@ -90,7 +90,7 @@ const Registration = () => {
             </div>
           </form>
           <p className="mt-10 text-center text-lg text-gray-500">
-            Already have an account? <Link to = "/loginN"  className='text-lg text-indigo-600  hover:text-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >Log In</Link>
+            Already have an account? <Link to = "N"  className='text-lg text-indigo-600  hover:text-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >Log In</Link>
           </p>
 
         </div>
