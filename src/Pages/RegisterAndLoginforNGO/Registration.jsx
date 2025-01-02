@@ -7,6 +7,7 @@ import "./RegisterAndLogin.css";
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { Alert } from "react-bootstrap";
+import  logo  from "../../Components/assets/logo.png";
 import { useUserAuth } from "../../context/UserAuthContext";
 
 const Registration = () => {
@@ -21,7 +22,7 @@ const Registration = () => {
     setError("");
     try {
       await signUp(email, password);
-      navigate("/loginN");
+      navigate("/login");
     } catch (err) {
       setError(err.message);
     }
@@ -33,11 +34,7 @@ const Registration = () => {
     <div className='loginstyle' >
       <div className="flex flex-1 flex-col justify-center ">
         <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
+          <img className="mx-auto h-10 w-auto" src={logo} alt="Your company" />
           <h2 className="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">
             Register
           </h2>
@@ -93,7 +90,7 @@ const Registration = () => {
             </div>
           </form>
           <p className="mt-10 text-center text-lg text-gray-500">
-            Already have an account? <Link to = "/loginN"  className='text-lg text-indigo-600  hover:text-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >Log In</Link>
+            Already have an account? <Link to = "N"  className='text-lg text-indigo-600  hover:text-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >Log In</Link>
           </p>
 
         </div>

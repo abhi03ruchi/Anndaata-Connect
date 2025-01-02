@@ -18,21 +18,14 @@ const Home = () => {
             <div>
                 <Navbar />
                 <HomeBanner />
-                {/* <OurServices/> */}
                 <Stats/>
                 <Features />
                 <About />
                 <SustainableGoals/>
-                <Parallax
-                    // blur={{ min: -15, max: 15 }}
-                    bgImage={group}
-                    bgImageAlt="the dog"
-                    strength={300}
-                >
-                    {/* Blur transition from min to max */}
-                    <div style={{ height: '80vh' }} />
-                </Parallax>
-                {/* <Team/> */}
+                <div className="image-container">
+                <img src={group} alt="group" className="parallax-img" />
+                {/* <div style={{ height: '80vh' }} /> */}
+                </div>
                 <Footer />
             </div>
         </>

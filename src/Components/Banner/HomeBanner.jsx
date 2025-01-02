@@ -81,7 +81,7 @@ const HomeBanner = () => {
                                             data-cy="landingpage-club-signup"
                                             id="landingpage-club-signup"
                                             variant="solid"
-                                            to="/loginN"
+                                            to="/login"
                                         >
                                             Sign up now
                                         </Button>

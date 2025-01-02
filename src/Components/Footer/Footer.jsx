@@ -40,7 +40,7 @@ const Footer = () => {
                             <ul className="text-gray-50  font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="/loginN"
+                                        href="/login"
                                         className="hover:underline "
                                     >
                                         Login

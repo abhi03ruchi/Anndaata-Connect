@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./RegisterAndLogin.css";
 import { useUserAuth } from "../../context/UserAuthContext";
 import { Alert } from "react-bootstrap";
+import  logo  from "../../Components/assets/logo.png";
 import GoogleButton from "react-google-button";
 
 
@@ -38,14 +39,10 @@ const Login = () => {
 
   return (
       <div className="loginstyle  flex flex-1 flex-col justify-center">
-        <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
+        <div className="logoImage">
+          <img className="mx-auto h-10 w-auto" src={logo} alt="Your Company" />
           <h2 className="mt-10 text-center text-5xl font-bold leading-9 tracking-tight text-gray-900">
-            Login in
+            Log In
           </h2>
         </div>
 
@@ -95,7 +92,7 @@ const Login = () => {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-md font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Signin
+                Log In
               </button>
             </div>
 

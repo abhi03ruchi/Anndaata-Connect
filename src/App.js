@@ -20,7 +20,7 @@ function App() {
       <UserAuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/loginN" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/team" element={<Team />} />
           <Route path="/donorProfile" element={<Donor />} />
           <Route path="/adminPage" element={<Admin />} />
