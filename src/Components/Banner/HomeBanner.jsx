@@ -1,109 +1,130 @@
-import React from "react";
-import "./Banner.css";
-import Cookies from "js-cookie";
-import { ImGithub } from "react-icons/im";
-import Button from "../Button/Button";
-import backgrd from "../../Components/assets/backgrd.png";
-import Navbar from "../Navbar/Navbar";
+import React, { useState } from 'react';
+import { useSpring, animated } from '@react-spring/web';
+import Cookies from 'js-cookie';
+import { ImGithub } from 'react-icons/im';
+import Button from '../Button/Button';
+import './Banner.css';
 
-const HomeBanner = () => {
-  const overlayStyle = {
-    position: "relative",
-    backgroundImage: `url(${backgrd})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const dullOverlayStyle = {
-    content: '""',
-    position: "absolute",
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.4)", // Adjust the alpha value for the desired opacity
-  };
-  const textContainerStyle = {
-    zIndex: 10, // Ensure the text is above the overlay
-    position: "relative",
-  };
+const AnimatedText = ({ children }) => {
+  const [isHovered, setHovered] = useState(false);
+  
+  const props = useSpring({
+    scale: isHovered ? 1.1 : 1,
+    color: isHovered ? '#e26959' : '#fff',
+    config: { tension: 300, friction: 10 }
+  });
 
   return (
-    <>
-      <div style={overlayStyle} id="home">
-        <div style={dullOverlayStyle}></div>
-        <div className="banner_mainparent" style={textContainerStyle}>
-          <div className="banner_subparent">
-            <div className="banner_textdiv">
-              <h1 className="banner_header1">
-                Connecting Excess to Empathy. <br /> Minimize Waste. <br />{" "}
-                Maximize Impact.
-              </h1>
-              <div>
-                <p className="banner_header3">
-                  An initiative to raise awareness and services for{" "}
-                  <span> food sustainability,</span>
-                  <br />
-                  promoting inclusivity across <span>
-                    all communities{" "}
-                  </span> and <br /> fostering a<span> world </span> without
-                  hunger.
-                </p>
-              </div>
+    <animated.span
+      style={props}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="animated-text"
+    >
+      {children}
+    </animated.span>
+  );
+};
 
-              <div className="banner_signup_btndiv">
-                <div className="banner_btn_div">
-                  {Cookies.get("isLoggedIn") ? (
-                    Cookies.get("usertype") === "club" ? (
-                      <Button
-                        className="banner_signup_btn"
-                        data-cy="landingpage-club-signup"
-                        id="landingpage-club-signup"
-                        variant="solid"
-                        to="/auth/signup"
-                      >
-                        Create an event
-                      </Button>
-                    ) : (
-                      <Button
-                        className="banner_signup_btn"
-                        data-cy="landingpage-club-signup"
-                        id="landingpage-club-signup"
-                        variant="solid"
-                        to="/shop"
-                      >
-                        Checkout our shop
-                      </Button>
-                    )
-                  ) : (
-                    <Button
-                      className="banner_signup_btn"
-                      data-cy="landingpage-club-signup"
-                      id="landingpage-club-signup"
-                      variant="solid"
-                      to="/login"
-                    >
-                      Sign up now
-                    </Button>
-                  )}
+const HomeBanner = () => {
+  const isLoggedIn = Cookies.get('isLoggedIn');
+  const userType = Cookies.get('usertype');
+  
+  const fadeIn = useSpring({
+    from: { opacity: 0, transform: 'translateY(20px)' },
+    to: { opacity: 1, transform: 'translateY(0)' },
+    config: { tension: 280, friction: 60 }
+  });
+
+  const buttonProps = useSpring({
+    from: { scale: 0.9 },
+    to: { scale: 1 },
+    config: { tension: 200, friction: 12 }
+  });
+
+  const githubIconAnimation = useSpring({
+    loop: { reverse: true },
+    from: { rotateZ: 0 },
+    to: { rotateZ: 360 },
+    config: { duration: 20000 }
+  });
+
+  return (
+    <div className="banner-container" id="home">
+      <div className="banner-background">
+        <div className="banner-overlay"></div>
+      </div>
+
+      <animated.div style={fadeIn} className="banner-content">
+        <div className="banner-inner">
+          <div className="banner-text-container">
+            <h1 className="banner-heading">
+              <AnimatedText>Connecting Excess to Empathy.</AnimatedText>
+              <br className="banner-break" /> 
+              <AnimatedText>Minimize Waste.</AnimatedText>
+              <br /> 
+              <AnimatedText>Maximize Impact.</AnimatedText>
+            </h1>
+
+            <animated.p className="banner-subheading">
+              An initiative to raise awareness and services for{' '}
+              <span className="highlight">food sustainability,</span>
+              <br className="banner-break" />
+              promoting inclusivity across{' '}
+              <span className="highlight">all communities</span> and
+              <br className="banner-break" /> 
+              fostering a <span className="highlight">world</span> without hunger.
+            </animated.p>
+
+            <animated.div style={buttonProps} className="banner-buttons">
+              {isLoggedIn ? (
+                userType === 'club' ? (
                   <Button
-                    className="banner_signup_btn"
-                    to="https://github.com/abhi03ruchi/Anndaata-Connect"
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="outline"
+                    className="banner-button"
+                    data-cy="landingpage-club-signup"
+                    variant="default"
+                    to="/auth/signup"
                   >
-                    <ImGithub className="banner_contribute_logo" />
-                    GitHub
+                    Create an event
                   </Button>
-                </div>
-              </div>
-            </div>
+                ) : (
+                  <Button
+                    className="banner-button"
+                    data-cy="landingpage-club-signup"
+                    variant="default"
+                    to="/shop"
+                  >
+                    Checkout our shop
+                  </Button>
+                )
+              ) : (
+                <Button
+                  className="banner-button"
+                  data-cy="landingpage-club-signup"
+                  variant="default"
+                  to="/login"
+                >
+                  Sign up now
+                </Button>
+              )}
+              
+              <Button
+                className="banner-button github-button"
+                variant="outline"
+                to="https://github.com/abhi03ruchi/Anndaata-Connect"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <animated.div style={githubIconAnimation}>
+                  <ImGithub className="github-icon" />
+                </animated.div>
+                GitHub
+              </Button>
+            </animated.div>
           </div>
         </div>
-      </div>
-    </>
+      </animated.div>
+    </div>
   );
 };
 
