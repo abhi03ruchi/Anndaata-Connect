@@ -1,186 +1,180 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 
-.content-overview{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #F5EAE8;
-    padding-top: 80px;
-    padding-bottom: 80px;
-
+.content-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5eae8;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.content-overview h1{
-    font-size: 50px;
-    text-align: center;
-    color: black;
+.content-overview h1 {
+  font-size: 50px;
+  text-align: center;
+  color: black;
 }
 .custom-typography {
-    text-align: center;
-    font-size: 22px;
-    color: #222344;
-    margin-right: 200px;
-    margin-left: 200px;
-    margin-bottom: 8px;
+  text-align: center;
+  font-size: 22px;
+  color: #222344;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-bottom: 8px;
 }
 
 .custom-typography .body1 {
-    margin: 0;
-    line-height: 1.5;
+  margin: 0;
+  line-height: 1.5;
 }
 
-.content-overview img{
-    width:70%;
-    margin-left: 17%;
-  }
-  .content-overview button{
-    align-items: center;
-    text-transform: uppercase;
-    margin-top: 29px;
-    margin-bottom:2%;
-    outline: 0;
-    color: #F5EAE8;
-    /* width: 30%; */
-    border: 0;
-    padding: 20px;
-    background:#FF4500;
-    font-size: 20px;
-    font-weight: bolder;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-    
-  }
-  /* responsivenss */
-    @media screen and (max-width: 968px) {
-        .content-overview {
-            margin-top: 60%;
-            flex-direction: column;
-            padding: 10px;
-        }
-        .content-overview h1{
-            text-align: center;
-            font-size: 45px;
-        }
-        .content-overview img{
-            width: 100%;
-            margin-left: 0%;
-        }
-        .custom-typography {
-            margin-right: 0px;
-            margin-left: 0px;
-        }
-        .content-overview button{
-            width: 100%;
-        }
-        .section-4  .custom-typography h2{
-            font-size: 35px;
-        }
-    }
-
-.section-4{
-    display: flex;
+.content-overview img {
+  width: 70%;
+  margin-left: 17%;
+}
+.content-overview button {
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 29px;
+  margin-bottom: 2%;
+  outline: 0;
+  color: #f5eae8;
+  /* width: 30%; */
+  border: 0;
+  padding: 20px;
+  background: #ff4500;
+  font-size: 20px;
+  font-weight: bolder;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+/* responsivenss */
+@media screen and (max-width: 968px) {
+  .content-overview {
+    margin-top: 60%;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:white;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-.section-4 h2{
-    font-size: 50px;
+    padding: 10px;
+  }
+  .content-overview h1 {
     text-align: center;
-    color: #28183b;
-    font-family: 'Inter', sans-serif;
-}   
-
-
-  .section-5{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #F5EAE8;
-    background-color: antiquewhite;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    font-size: 45px;
   }
-    .section-5 h1{
-        font-size: 45px;
-        text-align: center;
-        color: #e26959;
-        font-family: 'Inter', sans-serif;
-    }
-  /* Add this CSS code to your stylesheet or component-specific styling */
+  .content-overview img {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .custom-typography {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .content-overview button {
+    width: 100%;
+  }
+  .section-4 .custom-typography h2 {
+    font-size: 35px;
+  }
+}
+
+.section-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.section-4 h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #28183b;
+  font-family: "Inter", sans-serif;
+}
+
+.section-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5eae8;
+  background-color: antiquewhite;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.section-5 h1 {
+  font-size: 45px;
+  text-align: center;
+  color: #e26959;
+  font-family: "Inter", sans-serif;
+}
+/* Add this CSS code to your stylesheet or component-specific styling */
 
 .newsletter {
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .newsletter-content {
-    max-width: 450px;
-    margin: 0 auto;
-  }
-  
+  padding: 40px 0;
+  text-align: center;
+}
+
+.newsletter-content {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+}
+
+.newsletter-form input {
+  width: 70%;
+  padding: 20px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.newsletter-form button {
+  max-width: 30%;
+  padding: 18px;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background-color: #e26959;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .newsletter-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-  }
-  
-  .newsletter-form input {
-    width: 70%;
-    padding: 20px;
-    font-size: 14px;
-    border: 2px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-  }
-  
-  .newsletter-form button {
-    max-width: 30%;
-    padding: 18px;
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-    background-color: #e26959;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .newsletter-form {
-      flex-direction: column;
-    }
-  
-    .newsletter-form input,
-    .newsletter-form button {
-      width: 100%;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
+    flex-direction: column;
   }
 
-  .image-container {
-    position: relative;
-    height: 80vh; 
-    width: 100%; 
-    overflow: hidden; 
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+}
+
+.image-container {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .parallax-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%; 
-    width: 100%; 
-    object-fit:fill; 
-    z-index: -1; 
-  }
-
-
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+  z-index: -1;
+}
