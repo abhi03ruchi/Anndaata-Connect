@@ -163,18 +163,13 @@
 }
 
 .image-container {
-  position: relative;
-  height: 80vh;
+  height: auto;
   width: 100%;
   overflow: hidden;
 }
 
 .parallax-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
-  /* object-fit: cover; */
-  z-index: -1;
+  object-fit: cover;
 }
