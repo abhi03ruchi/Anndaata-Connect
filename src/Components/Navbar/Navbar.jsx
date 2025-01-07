@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Dialog, Popover } from "@headlessui/react";
+import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
 
@@ -19,9 +19,9 @@ export default function Example() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img src={Logo} alt="" className="h-16" />
+            <img src={Logo} alt="Company Logo" className="h-16" />
           </a>
         </div>
         <div className="flex lg:hidden z-50">
@@ -34,49 +34,42 @@ export default function Example() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="/" className="text-lg  leading-6 text-[#28183b] font-sans">
+        <div className="hidden lg:flex lg:gap-x-12">
+          <a href="/" className="text-lg leading-6 text-[#28183b] font-sans">
             Home
           </a>
-          <a
-            href="#about"
-            className="text-lg  leading-6 text-[#28183b] font-sans"
-          >
+          <a href="#about" className="text-lg leading-6 text-[#28183b] font-sans">
             About
           </a>
           <a
             href="/services"
-            className="text-lg  leading-6 text-[#28183b] font-sans"
+            className="text-lg leading-6 text-[#28183b] font-sans"
           >
             Services
           </a>
-          <a
-            href="/team"
-            className="text-lg  leading-6 text-[#28183b] font-sans"
-          >
+          <a href="/team" className="text-lg leading-6 text-[#28183b] font-sans">
             Team
           </a>
-        </Popover.Group>
+        </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button />
         </div>
       </nav>
       <Dialog
         as="div"
-        className="lg:hidden"
+        className="relative z-10 lg:hidden"
         open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
       >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-25"
+          onClick={() => setMobileMenuOpen(false)}
+        ></div>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
+              <img src={Logo} alt="Company Logo" className="h-8 w-auto" />
             </a>
             <button
               type="button"
@@ -117,7 +110,7 @@ export default function Example() {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
