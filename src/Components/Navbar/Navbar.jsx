@@ -25,6 +25,7 @@ export default function Example() {
           </a>
         </div>
         <div className="flex lg:hidden z-50">
+        {!mobileMenuOpen && (
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -33,6 +34,7 @@ export default function Example() {
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
+        )}
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           <a href="/" className="text-lg leading-6 text-[#28183b] font-sans">
@@ -65,11 +67,11 @@ export default function Example() {
           className="fixed inset-0 bg-black bg-opacity-25"
           onClick={() => setMobileMenuOpen(false)}
         ></div>
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full bg-white p-1 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
+            <a href="/">
               <span className="sr-only">Your Company</span>
-              <img src={Logo} alt="Company Logo" className="h-8 w-auto" />
+              <img src={Logo} alt="Company Logo" className="w-[211px] h-[64px]"/>
             </a>
             <button
               type="button"
@@ -77,7 +79,7 @@ export default function Example() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
             </button>
           </div>
           <div className="mt-6 flow-root">
