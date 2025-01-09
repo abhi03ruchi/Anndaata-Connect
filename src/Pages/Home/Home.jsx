@@ -17,6 +17,7 @@ const Home = () => {
     <>
       <div className="">
         <Navbar />
+        
         <HomeBanner />
         <Stats />
         <Features />

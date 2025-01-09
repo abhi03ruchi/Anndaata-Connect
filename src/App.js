@@ -13,10 +13,13 @@ import NGO from '../src/Pages/NGOList/NGOList';
 import Delivery from '../src/Pages/DeliveryPage/Delivery';
 import NGOProfile from '../src/Pages/ProfilePages/NGOForm';
 import Services from '../src/Components/Services/OurServices';
+import { ToastContainer } from 'react-toastify';
+
 function App() {
   return (
     <div className="App">
       <Scroll />
+      <ToastContainer />
       <UserAuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
