@@ -299,5 +299,5 @@ export default function DonorForm({ id, setRecordId }) {
             </div>
             <Footer />
         </>
-    )
+    );
 }
