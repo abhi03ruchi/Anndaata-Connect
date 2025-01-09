@@ -3,7 +3,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
 import Logo from "../assets/logo.png";
-import './Navbar.css';
+import "./Navbar.css";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,22 +14,23 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (e, href) => {
-    if (href.startsWith('#')) {
+    if (href.startsWith("#")) {
       e.preventDefault();
       const element = document.querySelector(href);
       if (element) {
         const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }
@@ -39,10 +40,14 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar-spacer" />
-      <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
+      <header className={`navbar-header ${scrolled ? "scrolled" : ""}`}>
         <nav className="navbar-container">
           <div className="logo-container">
-            <a href="/" className="logo-link" onClick={(e) => handleNavClick(e, '/')}>
+            <a
+              href="/"
+              className="logo-link"
+              onClick={(e) => handleNavClick(e, "/")}
+            >
               <img src={Logo} alt="Food Donor Logo" className="logo-image" />
             </a>
           </div>
@@ -60,10 +65,36 @@ export default function Navbar() {
             {["Home", "About", "Services", "Team"].map((item) => (
               <a
                 key={item}
-                href={item === "Home" ? "/" : item === "About" ? "#about" : `/${item.toLowerCase()}`}
-                onClick={(e) => handleNavClick(e, item === "Home" ? "/" : item === "About" ? "#about" : `/${item.toLowerCase()}`)}
+                href={
+                  item === "Home"
+                    ? "/"
+                    : item === "About"
+                    ? "#about"
+                    : `/${item.toLowerCase()}`
+                }
+                onClick={(e) =>
+                  handleNavClick(
+                    e,
+                    item === "Home"
+                      ? "/"
+                      : item === "About"
+                      ? "#about"
+                      : `/${item.toLowerCase()}`
+                  )
+                }
               >
-                {item}
+                <i
+                  className={
+                    item === "Home"
+                      ? "fas fa-home"
+                      : item === "About"
+                      ? "fas fa-info-circle"
+                      : item === "Services"
+                      ? "fas fa-cogs"
+                      : "fas fa-users"
+                  }
+                ></i>
+                <span className="ml-2">{item}</span>
               </a>
             ))}
           </div>
@@ -79,11 +110,17 @@ export default function Navbar() {
           open={mobileMenuOpen}
           onClose={() => setMobileMenuOpen(false)}
         >
-          <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)} />
-          
+          <div
+            className="mobile-menu-overlay"
+            onClick={() => setMobileMenuOpen(false)}
+          />
           <Dialog.Panel className="mobile-menu">
             <div className="mobile-menu-header">
-              <a href="/" className="logo-container" onClick={(e) => handleNavClick(e, '/')}>
+              <a
+                href="/"
+                className="logo-container"
+                onClick={(e) => handleNavClick(e, "/")}
+              >
                 <img src={Logo} alt="Food Donor Logo" className="h-8 w-auto" />
               </a>
               <button
@@ -100,10 +137,36 @@ export default function Navbar() {
               {["Home", "About", "Services", "Team"].map((item) => (
                 <a
                   key={item}
-                  href={item === "Home" ? "/" : item === "About" ? "#about" : `/${item.toLowerCase()}`}
-                  onClick={(e) => handleNavClick(e, item === "Home" ? "/" : item === "About" ? "#about" : `/${item.toLowerCase()}`)}
+                  href={
+                    item === "Home"
+                      ? "/"
+                      : item === "About"
+                      ? "#about"
+                      : `/${item.toLowerCase()}`
+                  }
+                  onClick={(e) =>
+                    handleNavClick(
+                      e,
+                      item === "Home"
+                        ? "/"
+                        : item === "About"
+                        ? "#about"
+                        : `/${item.toLowerCase()}`
+                    )
+                  }
                 >
-                  {item}
+                  <i
+                    className={
+                      item === "Home"
+                        ? "fas fa-home"
+                        : item === "About"
+                        ? "fas fa-info-circle"
+                        : item === "Services"
+                        ? "fas fa-cogs"
+                        : "fas fa-users"
+                    }
+                  ></i>
+                  <span className="ml-2">{item}</span>
                 </a>
               ))}
               <div className="mt-4 pt-4 border-t border-gray-200">
