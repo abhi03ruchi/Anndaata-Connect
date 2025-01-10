@@ -11,8 +11,8 @@
   background-color:#e26959;
   border-radius: 10px;
   position: fixed;
-  bottom: 5rem;
-  right: 5rem;
+  bottom: 50px;
+  right: 35px;
   z-index: 999;
   display: flex;
   justify-content: center;
