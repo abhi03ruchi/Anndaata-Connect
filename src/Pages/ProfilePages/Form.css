@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playfair+Display");
+body{
+    background-color: #e26959;
+}
+
 .bgImg{
     background-image: url("");
-    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -10,8 +13,8 @@
 }
 .box{
     width: 80%;
-    height: 70vh;
-    background-color: #fff;
+    height: 80vh;
+    background: rgba(255,255,255,0.1);
     border-radius: 10px;
     margin-left: 150px;
     box-shadow: 25px 25px 45px 25px rgba(0,0,0,0.1);
@@ -21,11 +24,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .cancelbtn{
     background-color: #f44336;
     color: white;
+    font-style: medium;
+    font-weight: bolder;
+    font-size: 20px;
     padding: 14px ;
     border: none;
     cursor: pointer;
@@ -39,14 +49,20 @@
 }
 
 .cancelbtn:hover{
-    opacity: 1;
+    /* opacity: 1; */
+    color: #f44336;
+    background: red;
+    box-shadow: 0 0 10px red, 0 0 40px red, 0 0 80px red;
 }
 .savebtn{
     background-color: #4CAF50;
-    color: white;
+    color: whitesmoke;
+    font-size: 20px;
+    font-style: medium;
+    font-weight: bolder;
+    cursor: pointer;
     padding: 14px ;
     border: none;
-    cursor: pointer;
     width: 10%;
     opacity: 0.8;
     border-radius: 10px;
@@ -54,8 +70,12 @@
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    overflow: hidden;
+    transition: 0.2s;
 }
 .savebtn:hover{
-    opacity: 1.8;
+    /* opacity: 1.8; */
+    color: #4CAF50;
+    background: lightgreen;
+    box-shadow: 0 0 10px lightgreen, 0 0 40px lightgreen, 0 0 80px lightgreen;
 }
-
