@@ -1,265 +1,144 @@
 
-/* body {
-    background-color: #ffe5e5;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  .registration-container {
-    background-color: #fff;
-    padding: 40px;
-    max-width: 600px;
-    margin: 60px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: none;
-    position: relative;
-  }
-  
-  
-  .registration-container::before {
-    content: "";
-    width: 100%;
-    height: 8px;
-    background-color: #e63946;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  
-  
-  .registration-container h2 {
-    text-align: center;
-    color: #e63946;
-    margin-bottom: 25px;
-    font-size: 28px;
-    letter-spacing: 1px;
-  }
-  
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus,
-  textarea:focus {
-    border-color: #e63946;
-    box-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
-    outline: none;
-  }
-  
-  
-  .checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.2);
-  }
-  
-  
-  label {
-    font-weight: 600;
-    color: #333;
-    display: inline;
-    margin-bottom: 5px;
-    text-align: left;
-  }
-  
-  
-  span {
-    color: #e63946;
-    font-size: 0.9em;
-    display: block;
-    margin-top: 2px;
-  }
-  
-  
-  button[type="submit"] {
-    width: 100%;
-    background-color: #e63946;
-    color: #fff;
-    padding: 12px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #d62839;
-    transform: scale(1.03);
-  }
-  
 
-  div {
-    margin-bottom: 20px;
-  }
-  
-  
-  textarea {
-    resize: none;
-    height: 100px;
-  } */
   /* Background Styling */
-body {
-    background-color: #ffe5e5;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container Styling */
-  .registration-container {
-    background-color: #fff;
-    padding: 40px;
-    max-width: 600px;
-    margin: 60px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: none;
-    position: relative;
-  }
-  
-  /* Decorative Top Bar */
-  .registration-container::before {
-    content: "";
-    width: 100%;
-    height: 8px;
-    background-color: #e63946;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  
-  /* Header Styling */
-  .registration-container h2 {
-    text-align: center;
-    color: #e63946;
-    margin-bottom: 25px;
-    font-size: 32px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 700;
-    position: relative;
-  }
-  
-  .registration-container h2::after {
-    content: "";
-    width: 60px;
-    height: 4px;
-    background-color: #e63946;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-  }
-  
-  /* Input Fields */
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus,
-  textarea:focus {
-    border-color: #e63946;
-    box-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
-    outline: none;
-  }
-  
-  /* Checkbox and Label Alignment */
-  .checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.2);
-  }
-  
-  /* Labels */
-  label {
-    font-weight: 600;
-    color: #333;
-    display: inline;
-    margin-bottom: 5px;
-    text-align: left;
-  }
-  
-  /* Error Messages */
-  span {
-    color: #e63946;
-    font-size: 0.9em;
-    display: block;
-    margin-top: 2px;
-  }
-  
-  /* Submit Button */
-  button[type="submit"] {
-    width: 100%;
-    background-color: #e63946;
-    color: #fff;
-    padding: 12px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #d62839;
-    transform: scale(1.03);
-  }
-  
-  /* Form Field Div */
-  div {
-    margin-bottom: 20px;
-  }
-  
-  /* Textarea Styling */
-  textarea {
-    resize: none;
-    height: 100px;
-  }
-  
+.registration-page {
+  background-color: #f8f9fa; /* Restored to a neutral light background */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Container Styling */
+.registration-container {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 600px;
+  margin: 60px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: none;
+  position: relative;
+}
+
+/* Decorative Top Bar */
+.registration-container::before {
+  content: "";
+  width: 100%;
+  height: 8px;
+  background-color: #e63946;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Header Styling */
+.registration-container h2 {
+  text-align: center;
+  color: #e63946;
+  margin-bottom: 25px;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+}
+
+.registration-container h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #e63946;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Input Fields */
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container input[type="password"],
+.registration-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-container input[type="text"]:focus,
+.registration-container input[type="email"]:focus,
+.registration-container input[type="password"]:focus,
+.registration-container textarea:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
+  outline: none;
+}
+
+/* Checkbox and Label Alignment */
+.registration-container .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.registration-container input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* Labels */
+.registration-container label {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+  /* text-align: left; */
+}
+
+/* Error Messages */
+.registration-container span {
+  color: #e63946;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Submit Button */
+.registration-container button[type="submit"] {
+  width: 100%;
+  background-color: #e63946;
+  color: #fff;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.registration-container button[type="submit"]:hover {
+  background-color: #d62839;
+  transform: scale(1.03);
+}
+
+/* Form Field Div */
+.registration-container div {
+  margin-bottom: 20px;
+}
+
+/* Textarea Styling */
+.registration-container textarea {
+  resize: none;
+  height: 100px;
+}
+
   
   .logo-container {
     display: flex;
