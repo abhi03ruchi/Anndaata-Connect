@@ -1,0 +1,172 @@
+.navbar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    transition: all 0.3s ease;
+    /* background: linear-gradient(to right, #f0fdf4, #dcfce7); */
+    width: 100vw;
+  }
+  
+  /* .navbar-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .navbar-container {
+    gap: 17vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo-image {
+    height: 56px;
+    width: auto;
+  }
+  
+  .company-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #166534;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-links a {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 1rem;
+  }
+
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+  
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .mobile-menu-button {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: #080808;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-button:hover {
+    background-color: #f0fdf4;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 384px;
+    background-color: white;
+    padding: 1.5rem;
+    z-index: 50;
+    overflow-y: auto;
+  }
+  
+  .mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .mobile-menu-links a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #111827;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 0.5rem;
+  }
+  
+  .mobile-menu-links a:hover {
+    background-color: #f0fdf4;
+    color: #606d65;
+  }
+  
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 40;
+  }
+  
+  .button-container {
+    display: none;
+  }
+  
+  /* Spacer for fixed navbar */
+  .navbar-spacer {
+    height: 80px;
+  }
+  
+  @media (min-width: 1024px) {
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+  
+    .mobile-menu-button {
+      display: none;
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+    }
+  
+    .company-name {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 1023px) {
+    .company-name {
+      display: none;
+    }
+  }
