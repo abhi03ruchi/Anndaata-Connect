@@ -5,8 +5,7 @@
     right: 0;
     z-index: 30;
     transition: all 0.3s ease;
-    background: linear-gradient(to right, #cef1d9, #dcfce7);
-    border-radius: 10px;
+    /* background: linear-gradient(to right, #f0fdf4, #dcfce7); */
     width: 100vw;
   }
   
