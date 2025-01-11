@@ -1,13 +1,13 @@
-/* .navbar-header {
+.navbar-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 30;
+    z-index:-50;
     transition: all 0.3s ease;
      background: linear-gradient(to right, #f0fdf4, #dcfce7); 
      width: 100vw;
-  }  */
+  } 
   
   .navbar-header.scrolled {
     background: rgba(255, 255, 255, 0.95);
@@ -15,7 +15,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   } 
 
-    .navbar-header {
+    /* .navbar-header {
 
      position: relative; 
     top: auto; 
@@ -24,7 +24,7 @@
     z-index: 30;
     transition: all 0.3s ease;
     width: 100%; 
-  } 
+  }  */
    
   
   .navbar-container {
