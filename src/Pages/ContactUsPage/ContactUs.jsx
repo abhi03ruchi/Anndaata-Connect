@@ -60,8 +60,8 @@ const ContactUs = () => {
         <button type="submit" style={{ backgroundColor: 'red', color: 'white' }}>Send Message</button>
       </form>
       <div className="contact-info">
-        <p><strong>Address:</strong> Annadata Organization, NewDelhi</p>
-        <p><strong>Email:</strong> support@annadata.org</p>
+        <p><strong>Address:</strong> Annadaata Organization, NewDelhi</p>
+        <p><strong>Email:</strong> support@annadaata.org</p>
         <p><strong>Phone:</strong> +91 987XXXXXXX</p>
       </div>
     </div>
