@@ -6,64 +6,62 @@ const Footer = () => {
     <footer className="bg-[#302f2f] px-4 py-8">
       <div className="mx-auto w-full max-w-screen-xl">
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row md:justify-between gap-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-8">
           {/* Logo Section */}
-          <div className="flex justify-center md:justify-start mb-6 md:mb-0">
+          <div className="flex justify-center lg:justify-start mb-6 lg:mb-0">
             <a href="/" className="inline-block">
               <img
                 src={logo}
-                className="h-16 md:h-20"
+                className="h-14 sm:h-16 lg:h-20"
                 alt="AnnaDaata Connect Logo"
               />
             </a>
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Quick Links */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <h2 className="mb-4 text-sm font-semibold text-white uppercase">
                 Quick Links
               </h2>
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
-                  <a
-                    href="/team"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/team" className="hover:underline hover:text-[#e26959] transition-colors">
                     Team
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/services"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/services" className="hover:underline hover:text-[#e26959] transition-colors">
                     Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/team" className="hover:underline hover:text-[#e26959] transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/team" className="hover:underline hover:text-[#e26959] transition-colors">
+                    Terms and Conditions
                   </a>
                 </li>
               </ul>
             </div>
 
             {/* Join Us */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <h2 className="mb-4 text-sm font-semibold text-gray-50 uppercase">
                 Join Us
               </h2>
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
-                  <a
-                    href="/login"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/login" className="hover:underline hover:text-[#e26959] transition-colors">
                     Login
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/registration"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/registration" className="hover:underline hover:text-[#e26959] transition-colors">
                     Register
                   </a>
                 </li>
@@ -71,24 +69,18 @@ const Footer = () => {
             </div>
 
             {/* Contact Us */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <h2 className="mb-4 text-sm font-semibold text-gray-50 uppercase">
                 Contact Us
               </h2>
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
-                  <a
-                    href="mailto:abhiruchis03@gmail.com"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="mailto:abhiruchis03@gmail.com" className="hover:underline hover:text-[#e26959] transition-colors">
                     abhiruchis03@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="mailto:tarushi23@gmail.com"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="mailto:tarushi23@gmail.com" className="hover:underline hover:text-[#e26959] transition-colors">
                     tarushi23@gmail.com
                   </a>
                 </li>
@@ -104,14 +96,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <span className="text-gray-50 text-center sm:text-left text-sm md:text-base">
-            © {new Date().getFullYear()}{" "}
-            <a
-              href="/"
-              className="hover:underline hover:text-[#e26959] transition-colors"
-            >
-              AnnDaata Connect
-            </a>
-            . All Rights Reserved.
+            © {new Date().getFullYear()} <a href="/" className="hover:underline hover:text-[#e26959] transition-colors">AnnDaata Connect</a>. All Rights Reserved.
           </span>
 
           {/* Social Icons */}
@@ -171,5 +156,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
