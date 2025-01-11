@@ -5,14 +5,14 @@
 }
 
 .top-btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   color: black;
-  background-color:#e26959;
-  border-radius: 10px;
+  background-color:#0404fb;
+  border-radius: 20px;
   position: fixed;
   bottom: 50px;
-  right: 35px;
+  right: 25px;
   z-index: 999;
   display: flex;
   justify-content: center;
