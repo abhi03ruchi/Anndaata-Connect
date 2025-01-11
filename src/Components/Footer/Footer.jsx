@@ -135,7 +135,7 @@ const Footer = () => {
 
             {/* Twitter */}
             <a
-              href="#"
+              href="https://x.com/login.do"
               className="text-[#e26959] hover:text-gray-50 transition-colors"
               aria-label="Follow us on Twitter"
             >
