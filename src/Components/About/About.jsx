@@ -20,14 +20,21 @@ const Hero = () => {
           and everyone has access to nourishing meals, creating a ripple effect
           of social responsibility and compassion.
         </p>
-        <div className="buttons">
-          <h2>Follow Us:</h2>
-          <div className="social">
-            <FaGithub role="button" aria-label="GitHub" />
-            <FaXTwitter role="button" aria-label="Twitter" />
-            <FaInstagram role="button" aria-label="Instagram" />
-          </div>
-        </div>
+<div className="buttons">
+  <h2>Follow Us:</h2>
+  <div className="social">
+    <a href="https://github.com/abhi03ruchi/Anndaata-Connect" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <FaGithub role="button" />
+    </a>
+    <a href="https://x.com/login.do" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+      <FaXTwitter role="button" />
+    </a>
+    <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <FaInstagram role="button" />
+    </a>
+  </div>
+</div>
+
       </div>
       <div className="right">
         <img src={About} alt="Food Waste Illustration" />
