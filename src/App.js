@@ -6,6 +6,7 @@ import Scroll from './Components/GoToTop/GoToTop';
 import Login from './Pages/RegisterAndLoginforNGO/Login';
 import Registration from './Pages/RegisterAndLoginforNGO/Registration';
 import Register from './Pages/Registerpagefordonors/register';
+import ContactUs from './Pages/ContactUsPage/ContactUs';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import Team from '../src/Components/Team/Team';
 import Donor from '../src/Pages/ProfilePages/donarForm';
@@ -31,6 +32,7 @@ function App() {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/services" element={<Services />} />
           <Route path="/donor-register" element={<Register />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </UserAuthContextProvider>
     </div>

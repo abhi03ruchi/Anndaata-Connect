@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
 
             {/* Contact Us */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left space-y-3">
               <h2 className="mb-4 text-sm font-semibold text-gray-50 uppercase">
                 Contact Us
               </h2>
@@ -85,6 +85,13 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+              <div className="text-gray-50 font-semibold space-y-3">
+
+                  <a  href="/contactus" className="hover:underline hover:text-[#e26959] transition-colors">
+                    Contact Us Form
+                  </a>
+              </div>
+               
             </div>
           </div>
         </div>
