@@ -8,7 +8,6 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
 import { imgDB } from "../../FirebaseConfig";
 import { useNavigate } from 'react-router-dom';
-import Tilt from 'react-parallax-tilt';
 
 export default function DonorForm() {
     const [img, setImg] = useState('');
@@ -95,22 +94,20 @@ export default function DonorForm() {
         <>
             <Banner />
             <div className='p-[60px] bgImg' >
-            <h2 className="text-center text-7xl mb-10 leading-7 text-gray-900"
-                    style={{ fontFamily: 'DM Serif Text' }}
-                    >Profile</h2>
-                <Tilt>   
+                <h2 className="text-4xl text-center leading-7 text-gray-900"
+                    style={{ fontFamily: 'Inter' }}
+                >Profile</h2>
                 <div className='box'>
                     <div className="border-b border-gray-900/10 pb-12">
-                        <div className=" flex justify-center items-center text-center mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            <div className="grid gap-4 grid-cols-1 col-span-full text-center">
-                                <label htmlFor="photo" className="grid grid-cols-1 grid-rows-2 gap-x-2 gap-y-2 block text-6xl font-medium leading-8 text-gray-900"
-                                style={{ fontFamily: 'DM Serif Text' }}>
+                        <div className=" text-left mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                            <div className="col-span-full ">
+                                <label htmlFor="photo" className="block text-lg font-medium leading-6 text-gray-900">
                                     Logo
                                 </label>
-                                <div className=" -mt-10 -mr-5 ml-20 mb-40 grid grid-cols-1 grid-rows-1 gap-x-9 gap-y-9">
-                                <UserCircleIcon className="mt-4 mr-10 h-[230px] w-[230px] text-gray-300" aria-hidden="true" />
+                                <div className="mt-2 flex items-center gap-x-3">
+                                    <UserCircleIcon className="h-[75px] w-[75px] text-gray-300" aria-hidden="true" />
                                     <input type="file"
-                                        className=" rounded-md bg-red px-1.5 py-1.5 text-base font-bold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                        className="rounded-md bg-white px-1.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                                         onChange={(e) => handleUpload(e)} />
                                 </div>
                             </div>
@@ -119,10 +116,9 @@ export default function DonorForm() {
                     <div className="text-left border-b border-gray-900/10">
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                             <div className="sm:col-span-3">
-            
-                            <label htmlFor="first-name"class="block text-lg font-bold leading-6 text-gray-900" >
+                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
                                     Name of Organization
-                            </label>
+                                </label>
                                 <div className="mt-2">
                                     <input
                                         type="text"
@@ -131,12 +127,13 @@ export default function DonorForm() {
                                         value={nameOrg}
                                         onChange={(e) => setNameOrg(e.target.value)}
                                         autoComplete="given-name"
-                                        className='peer block w-[15rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""'/>
-                                    </div>
-                            </div> 
+                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    />
+                                </div>
+                            </div>
+
                             <div className="sm:col-span-3">
-                                <label htmlFor="last-name" className="block text-lg font-bold leading-6 text-gray-900">
+                                <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
                                     Email address of Organization
                                 </label>
                                 <div className="mt-2">
@@ -147,14 +144,13 @@ export default function DonorForm() {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         autoComplete="email"
-                                        className="peer block w-[15rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
 
                             <div className="sm:col-span-3">
-                                <label htmlFor="number" className="block text-lg font-bold leading-6 text-gray-900">
+                                <label htmlFor="number" className="block text-sm font-medium leading-6 text-gray-900">
                                     Name of Person
                                 </label>
                                 <div className="mt-2">
@@ -165,14 +161,13 @@ export default function DonorForm() {
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         autoComplete="number"
-                                        className="peer block w-[15rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
 
                             <div className="sm:col-span-3">
-                                <label htmlFor="Time" className="block text-lg font-bold leading-6 text-gray-900">
+                                <label htmlFor="Time" className="block text-sm font-medium leading-6 text-gray-900">
                                     Time
                                 </label>
                                 <div className="mt-2">
@@ -193,7 +188,7 @@ export default function DonorForm() {
 
 
                             <div className="col-span-full">
-                                <label htmlFor="street-address" className="block text-lg font-bold leading-6 text-gray-900">
+                                <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">
                                     Street address
                                 </label>
                                 <div className="mt-2">
@@ -204,14 +199,13 @@ export default function DonorForm() {
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
                                         autoComplete="street-address"
-                                        className="peer block w-[20rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
 
                             <div className="sm:col-span-2 sm:col-start-1">
-                                <label htmlFor="city" className="block text-lg font-bold leading-6 text-gray-900">
+                                <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
                                     City
                                 </label>
                                 <div className="mt-2">
@@ -220,14 +214,13 @@ export default function DonorForm() {
                                         name="city"
                                         id="city"
                                         autoComplete="address-level2"
-                                        className="peer block w-[10rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
 
                             <div className="sm:col-span-2">
-                                <label htmlFor="region" className="block text-lg font-bold leading-6 text-gray-900">
+                                <label htmlFor="region" className="block text-sm font-medium leading-6 text-gray-900">
                                     Number of Meals
                                 </label>
                                 <div className="mt-2">
@@ -238,13 +231,12 @@ export default function DonorForm() {
                                         autoComplete="address-level1"
                                         value={mealno}
                                         onChange={(e) => setMealno(e.target.value)}
-                                        className="peer block w-[10rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label htmlFor="postal-code" className="block text-lg font-bold leading-6 text-gray-900">
+                                <label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-gray-900">
                                     ZIP / Postal code
                                 </label>
                                 <div className="mt-2">
@@ -253,17 +245,16 @@ export default function DonorForm() {
                                         name="postal-code"
                                         id="postal-code"
                                         autoComplete="postal-code"
-                                        className="peer block w-[10rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder="" />
+                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Tilt> 
                 <div className=" flex items-center justify-end gap-x-6">
                     <button type="reset" className="cancelbtn">
-                        Cancel 
+                        Cancel
                     </button>
                     {!show ? <button className="savebtn" onClick={handleCreate}>Create</button> :
                         <button onClick={handleUpdate}>Update</button>}
