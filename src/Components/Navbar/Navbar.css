@@ -15,7 +15,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   } 
 
-    /* .navbar-header {
+   .navbar-header {
 
      position: relative; 
     top: auto; 
@@ -24,8 +24,8 @@
     z-index: 30;
     transition: all 0.3s ease;
     width: 100%; 
-  }  */
-   
+  }  
+    
   
   .navbar-container {
     gap: 17vw;
