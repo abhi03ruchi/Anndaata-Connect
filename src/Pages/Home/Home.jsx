@@ -2,8 +2,7 @@ import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import "./Home.css";
 import SustainableGoals from "../../Components/SustainableGoals";
-import { Parallax } from "react-parallax";
-import group from "../../Components/assets/groupPic.png";
+import ParallaxSection from "../../Components/Parallax"; // Import the new component
 import Footer from "../../Components/Footer/Footer";
 import HomeBanner from "../../Components/Banner/HomeBanner";
 import About from "../../Components/About/About";
@@ -22,9 +21,7 @@ const Home = () => {
         <Features />
         <About />
         <SustainableGoals />
-        <div className="image-container">
-          <img src={group} alt="group" className="parallax-img" />
-        </div>
+        <ParallaxSection /> {/* Replace the image-container div with this */}
         <Footer />
       </div>
     </>
