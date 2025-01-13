@@ -5,7 +5,8 @@
     right: 0;
     z-index: 30;
     transition: all 0.3s ease;
-    /* background: linear-gradient(to right, #f0fdf4, #dcfce7); */
+    background: #FFFFFFCC;
+    backdrop-filter: blur(8px);
     width: 100vw;
   }
   
@@ -136,11 +137,6 @@
   
   .button-container {
     display: none;
-  }
-  
-  /* Spacer for fixed navbar */
-  .navbar-spacer {
-    height: 80px;
   }
   
   @media (min-width: 1024px) {

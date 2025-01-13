@@ -39,7 +39,6 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="navbar-spacer" />
       <header className={`navbar-header ${scrolled ? "scrolled" : ""}`}>
         <nav className="navbar-container">
           <div className="logo-container">
