@@ -1,7 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import logo from "../../Components/assets/logo.png";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    setMessage(email ? "Thank you for subscribing!" : "Please enter a valid email.");
+    if (email) setEmail("");
+  };
+
   return (
     <footer className="bg-[#302f2f] px-4 py-8">
       <div className="mx-auto w-full max-w-screen-xl">
@@ -17,10 +27,29 @@ const Footer = () => {
               />
             </a>
           </div>
+         {/* Newsletter Section */}
+ <div className="text-center mb-8">
+          <h2 className="text-white text-sm font-semibold mb-4">SUBSCRIBE TO OUR NEWSLETTER</h2>
+          <form onSubmit={handleSubscribe} className="flex justify-center items-center">
+          <input
+  type="email"
+  className="p-2 rounded-l-lg w-full sm:w-1/2 md:w-64 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#e26959] mb-1"
+  placeholder="Enter your email"
+/>
 
+      <button
+  type="submit"
+  className="bg-[#e26959] p-2 text-white rounded-lg font-semibold text-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-[#b85e4c] focus:outline-none focus:ring-2 focus:ring-[#e26959] focus:ring-opacity-50 shadow-md hover:shadow-lg"
+>
+  Subscribe
+</button>
+
+          </form>
+          {message && <p className="text-white mt-3">{message}</p>}
+        </div>
           {/* Links Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Quick Links */}
+          {/* Quick Links */}
             <div className="text-center lg:text-left">
               <h2 className="mb-4 text-sm font-semibold text-white uppercase">
                 Quick Links
@@ -42,7 +71,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/team" className="hover:underline hover:text-[#e26959] transition-colors">
+                  <a href="/termsandconditions" className="hover:underline hover:text-[#e26959] transition-colors">
                     Terms and Conditions
                   </a>
                 </li>
