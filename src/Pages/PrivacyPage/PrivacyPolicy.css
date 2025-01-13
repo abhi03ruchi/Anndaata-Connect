@@ -1,0 +1,64 @@
+/* Privacy Policy Page Styles */
+.privacy-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .privacy-container h2 {
+    font-size: 2.2rem;
+    color: #b30000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .privacy-container h3 {
+    font-size: 1.5rem;
+    color: #900000;
+    margin-top: 20px;
+  }
+  
+  .privacy-container p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  .privacy-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-container a {
+    color: #b30000;
+    text-decoration: none;
+  }
+  
+  .privacy-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .back-button:hover {
+    background-color: #800000;
+  }
+  
