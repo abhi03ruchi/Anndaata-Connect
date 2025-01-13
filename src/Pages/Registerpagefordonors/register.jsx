@@ -64,36 +64,36 @@ function DonorRegistration() {
       <form onSubmit={handleSubmit}>
         <div>
           <label>Full Name:</label>
-          <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} />
+          <input type="text" name="fullName" placeholder='enter your name' value={formData.fullName} onChange={handleChange} />
           {errors.fullName && <span>{errors.fullName}</span>}
         </div>
         <div>
           <label>Email:</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
+          <input type="email" name="email" placeholder='enter your email' value={formData.email} onChange={handleChange} />
           {errors.email && <span>{errors.email}</span>}
         </div>
         <div>
           <label>Password:</label>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} />
+          <input type="password" name="password" placeholder='enter password' value={formData.password} onChange={handleChange} />
           {errors.password && <span>{errors.password}</span>}
         </div>
         <div>
           <label>Confirm Password:</label>
-          <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+          <input type="password" name="confirmPassword" placeholder='confirm your password' value={formData.confirmPassword} onChange={handleChange} />
           {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
         </div>
         <div>
           <label>Phone Number:</label>
-          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
+          <input type="text" name="phoneNumber" placeholder='enter your phone number' value={formData.phoneNumber} onChange={handleChange} />
           {errors.phoneNumber && <span>{errors.phoneNumber}</span>}
         </div>
         <div>
           <label>Organization Name (optional):</label>
-          <input type="text" name="organizationName" value={formData.organizationName} onChange={handleChange} />
+          <input type="text" name="organizationName" placeholder='enter your organization' value={formData.organizationName} onChange={handleChange} />
         </div>
         <div>
           <label>Address:</label>
-          <textarea name="address" value={formData.address} onChange={handleChange}></textarea>
+          <textarea name="address" placeholder='enter your address' value={formData.address} onChange={handleChange}></textarea>
           {errors.address && <span>{errors.address}</span>}
         </div>
         <div>
