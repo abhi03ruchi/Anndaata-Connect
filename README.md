@@ -1,30 +1,33 @@
+<div align="center">
+  <img width="400"  alt="Anndaata Connect" align='center' src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/bffeff6b6ebced9f6f22b5516287449b120a4ccd/src/Components/assets/logo.png">
+</div>
+
+<hr>
 
 <div align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
-  <br>
- </div>
-
- <div align = "center">
-
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg" />&nbsp;
+  <img src="https://forthebadge.com/images/badges/uses-brains.svg" />&nbsp;
+  <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+</div>
+<br>
+<div align = "center">
 <table align="center">
     <thead align="center">
         <tr border: 1px;>
-            <td><b>🌟 Stars</b></td>
-            <td><b>🍴 Forks</b></td>
-            <td><b>🐛 Issues</b></td>
-            <td><b>🔔 Open PRs</b></td>
-            <td><b>🔕 Close PRs</b></td>
+            <td><strong>🌟 Stars</strong></td>
+            <td><strong>🍴 Forks</strong></td>
+            <td><strong>🐛 Issues</strong></td>
+            <td><strong>🔔 Open PRs</strong></td>
+            <td><strong>🔕 Close PRs</strong></td>
         </tr>
      </thead>
     <tbody>
          <tr>
-            <td><img alt="Stars" src="https://img.shields.io/github/stars/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
-             <td><img alt="Forks" src="https://img.shields.io/github/forks/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
-            <td><img alt="Issues" src="https://img.shields.io/github/issues/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
-            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/abhi03ruchi/Anndaata-Connect?style=flat&logo=github"/></td>
-           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/abhi03ruchi/Anndaata-Connect?style=flat&color=critical&logo=github"/></td>
+            <td><a href="https://github.com/abhi03ruchi/Anndaata-Connect/stargazers" target="_blank"><img alt="Stars" src="https://img.shields.io/github/stars/abhi03ruchi/Anndaata-Connect?style=for-the-badge&logo=andela"/></a></td>
+            <td><a href="https://github.com/abhi03ruchi/Anndaata-Connect/forks" target="_blank"><img alt="Forks" src="https://img.shields.io/github/forks/abhi03ruchi/Anndaata-Connect?style=for-the-badge&logo=git&logoColor=white"/></a></td>
+            <td><a href="https://github.com/abhi03ruchi/Anndaata-Connect/issues" target="_blank"><img alt="Issues" src="https://img.shields.io/github/issues/abhi03ruchi/Anndaata-Connect?style=for-the-badge&logo=target&color=red"/></a></td>
+            <td><a href="https://github.com/abhi03ruchi/Anndaata-Connect/pulls?q=is%3Aopen+is%3Apr" target="_blank"><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/abhi03ruchi/Anndaata-Connect?style=for-the-badge&logo=github&color=green"/></a></td>
+           <td><a href="https://github.com/abhi03ruchi/Anndaata-Connect/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/abhi03ruchi/Anndaata-Connect?style=for-the-badge&color=green&logo=github"/></a></td>
         </tr>
     </tbody>
 </table>
@@ -32,12 +35,6 @@
 
 
 <hr>
-
-<table style="border: none;" align="center" >
-  <tr>
-    <td><img width="300"  alt="pic1 copy" align='center' src="https://github.com/abhi03ruchi/Anndaata-Connect/blob/bffeff6b6ebced9f6f22b5516287449b120a4ccd/src/Components/assets/logo.png"> </td>
-  </tr>
-</table>
 
     
 ## Problem Statement 😖
