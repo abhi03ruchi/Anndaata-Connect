@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 .bgImg{
-    background-image: url("");
+    background-image: none;
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
