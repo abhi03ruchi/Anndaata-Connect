@@ -1,7 +1,7 @@
 import { UserCircleIcon } from '@heroicons/react/24/solid';
 import React, { useState, useEffect, useCallback } from 'react';
-import Navbar from '../../Components/Navbar/Navbar'
-import Footer from '../../Components/Footer/Footer'
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 import ProfileDataService from "../adminPage/admin";
 import { Alert } from 'react-bootstrap';
 import Banner from "../../Components/Banner";
@@ -76,19 +76,9 @@ export default function DonorForm({ id, setRecordId }) {
     return (
         <>
             <Navbar />
-            {message?.msg && (
-                <Alert
-                    variant={message?.error ? "danger" : "success"}
-                    dismissible
-                    onClose={() => setMessage("")}
-                >
-                    {message?.msg}
-                </Alert>
-            )}
-
-            <form onSubmit={handleSubmit} className="p-6 pt-20 min-h-screen" >
+            <form onSubmit={handleSubmit} className="p-6 pt-20 min-h-fit" >
                 <Banner />
-                <h2 className="text-3xl"
+                <h2 className="text-4xl text-center mb-3 text-gray-900"
                     style={{ fontFamily: 'Inter' }}
                 >Profile</h2>
                 <div className="flex flex-wrap m-auto relative justify-center max-w-[75rem] gap-6">
@@ -108,11 +98,11 @@ export default function DonorForm({ id, setRecordId }) {
                     </div>
                     <div className="flex gap-6 relative max-md:flex-wrap max-md:justify-center">
                         <div className="flex flex-col w-full">
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="first-name" className="text-[15px] text-gray-800 font-semibold">
                                     Name
                                 </label>
-                                <div className="">
+                                <div>
                                     <input
                                         type="text"
                                         name="first-name"
@@ -124,11 +114,11 @@ export default function DonorForm({ id, setRecordId }) {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="last-name" className="text-[15px] text-gray-800 font-semibold">
                                     Email address
                                 </label>
-                                <div className="">
+                                <div>
                                     <input
                                         id="email"
                                         name="email"
@@ -140,11 +130,11 @@ export default function DonorForm({ id, setRecordId }) {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="number" className="text-[15px] text-gray-800 font-semibold">
                                     Phone Number
                                 </label>
-                                <div className="">
+                                <div>
                                     <input
                                         id="number"
                                         name="number"
@@ -156,11 +146,11 @@ export default function DonorForm({ id, setRecordId }) {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="country" className="text-[15px] text-gray-800 font-semibold">
                                     Country
                                 </label>
-                                <div className="">
+                                <div>
                                     <select
                                         id="country"
                                         name="country"
@@ -174,11 +164,11 @@ export default function DonorForm({ id, setRecordId }) {
                             </div>
                         </div>
                         <div className="flex flex-col w-full">
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="street-address" className="text-[15px] text-gray-800 font-semibold">
                                     Street address
                                 </label>
-                                <div className="">
+                                <div>
                                     <input
                                         type="text"
                                         name="street-address"
@@ -190,11 +180,11 @@ export default function DonorForm({ id, setRecordId }) {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="city" className="text-[15px] text-gray-800 font-semibold">
                                     City
                                 </label>
-                                <div className="">
+                                <div>
                                     <input
                                         type="text"
                                         name="city"
@@ -204,11 +194,11 @@ export default function DonorForm({ id, setRecordId }) {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="region" className="text-[15px] text-gray-800 font-semibold">
                                     State / Province
                                 </label>
-                                <div className="">
+                                <div>
                                     <input
                                         type="text"
                                         name="region"
@@ -217,11 +207,11 @@ export default function DonorForm({ id, setRecordId }) {
                                     />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
                                 <label htmlFor="postal-code" className="text-[15px] text-gray-800 font-semibold">
                                     ZIP / Postal code
                                 </label>
-                                <div className="">
+                                <div>
                                     <input
                                         type="text"
                                         name="postal-code"
@@ -233,7 +223,17 @@ export default function DonorForm({ id, setRecordId }) {
                         </div>
                     </div>
                 </div>
-                <div className="">
+                <div>
+                    {message?.msg && (
+                        <Alert
+                            variant={message?.error ? "danger" : "success"}
+                            dismissible
+                            onClose={() => setMessage("")}
+                        >
+                            {message?.msg}
+                        </Alert>
+                    )}
+                    <br />
                     <button type="reset" className="cancelbtn">
                         Cancel
                     </button>
