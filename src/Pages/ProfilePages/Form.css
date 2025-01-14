@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+
+form input, form select {
+    accent-color: rgb(226, 105, 89) !important;
+}
+
 .bgImg{
     background-image: url("");
     background-color: white;
@@ -6,7 +11,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 84vh;
+    min-height: 84vh;
 }
 .box{
     width: 80%;
@@ -23,39 +28,22 @@
     justify-content: space-around;
 }
 
-.cancelbtn{
+.savebtn, .cancelbtn{
     background-color: #f44336;
     color: white;
-    padding: 14px ;
+    padding: 10px;
     border: none;
     cursor: pointer;
-    width: 10%;
+    margin: 0 10px;
+    width: 100px;
     opacity: 0.8;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
-.cancelbtn:hover{
+.savebtn {
+    background-color: #4CAF50;
+}
+
+.cancelbtn:hover, .savebtn:hover{
     opacity: 1;
 }
-.savebtn{
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px ;
-    border: none;
-    cursor: pointer;
-    width: 10%;
-    opacity: 0.8;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.savebtn:hover{
-    opacity: 1.8;
-}
-
