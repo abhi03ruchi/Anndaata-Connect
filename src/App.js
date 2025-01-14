@@ -6,6 +6,7 @@ import Scroll from './Components/GoToTop/GoToTop';
 import Login from './Pages/RegisterAndLoginforNGO/Login';
 import Registration from './Pages/RegisterAndLoginforNGO/Registration';
 import DonorRegistration from './Pages/Registerpagefordonors/register';
+import TermsAndConditions from './Pages/TermsandConditionsPage/Terms';
 import ContactUs from './Pages/ContactUsPage/ContactUs';
 import PrivacyPolicy from './Pages/PrivacyPage/privacy';
 import { UserAuthContextProvider } from './context/UserAuthContext';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/ngoList" element={<NGO />} />
           <Route path="/ngoProfile" element={<NGOProfile />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/termsandconditions" element={<TermsAndConditions />} />
           <Route path="/ngo-register" element={<Registration />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/services" element={<Services />} />
