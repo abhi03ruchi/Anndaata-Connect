@@ -5,7 +5,7 @@ form input, form select {
 }
 
 .bgImg{
-    background-image: url("");
+    background-image: none;
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;

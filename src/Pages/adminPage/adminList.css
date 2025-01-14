@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 .boxhead{
-  background-image: url("");
+  background-image: none;
   background-color: aliceblue;
   background-repeat: no-repeat;
   background-size: cover;
