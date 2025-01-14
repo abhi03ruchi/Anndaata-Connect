@@ -5,7 +5,8 @@
     right: 0;
     z-index: 30;
     transition: all 0.3s ease;
-    /* background: linear-gradient(to right, #f0fdf4, #dcfce7); */
+    background: #FFFFFFCC;
+    backdrop-filter: blur(8px);
     width: 100vw;
   }
   
@@ -35,6 +36,7 @@
   .logo-image {
     height: 56px;
     width: auto;
+    max-width: none;
   }
   
   .company-name {
@@ -55,6 +57,8 @@
     text-decoration: none;
     position: relative;
     padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
   }
 
   
@@ -136,11 +140,6 @@
   
   .button-container {
     display: none;
-  }
-  
-  /* Spacer for fixed navbar */
-  .navbar-spacer {
-    height: 80px;
   }
   
   @media (min-width: 1024px) {
