@@ -86,7 +86,7 @@ export default function DonorForm({ id, setRecordId }) {
             )}
 
             <Banner />
-            <form onSubmit={handleSubmit} className='p-[60px] bgImg' >
+            <form onSubmit={handleSubmit} className='p-[-100px] bgImg' >
                 <h2 className="text-center text-7xl mb-10 leading-7 text-gray-900"
                     style={{ fontFamily: 'DM Serif Text' }}
                 >Profile</h2>
@@ -253,7 +253,7 @@ export default function DonorForm({ id, setRecordId }) {
                     </div>
                 </div>
                 </Tilt>
-                <div className=" flex items-center justify-end gap-x-6">
+                <div className=" flex items-center justify-end gap-x-6 bg-[#e26959]">
                     <button type="reset" className="cancelbtn">
                         Cancel
                     </button>

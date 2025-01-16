@@ -94,11 +94,11 @@ export default function DonorForm() {
     return (
         <>
             <Banner />
-            <div className='p-[60px] bgImg' >
+            <div className='p-[-10px] bgImg'>
             <h2 className="text-center text-7xl mb-10 leading-7 text-gray-900"
                     style={{ fontFamily: 'DM Serif Text' }}
                     >Profile</h2>
-                <Tilt>   
+                <Tilt>  
                 <div className='box'>
                     <div className="border-b border-gray-900/10 pb-12">
                         <div className=" flex justify-center items-center text-center mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -261,14 +261,14 @@ export default function DonorForm() {
                     </div>
                 </div>
             </Tilt> 
-                <div className=" flex items-center justify-end gap-x-6">
+            <div className="flex items-center justify-end gap-x-6 bg-[#e26959]">
                     <button type="reset" className="cancelbtn">
                         Cancel 
                     </button>
                     {!show ? <button className="savebtn" onClick={handleCreate}>Create</button> :
                         <button onClick={handleUpdate}>Update</button>}
+                    </div>
                 </div>
-            </div>
         </>
     )
 }

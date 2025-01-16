@@ -1,15 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playfair+Display");
-body{
-    background-color: #e26959;
-}
 
 .bgImg{
     background-image: url("");
+    background-color: #e26959;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 84vh;
+    height: 100vh;
 }
 .box{
     width: 80%;
