@@ -90,7 +90,7 @@ export default function DonorForm({ id, setRecordId }) {
                 <h2 className="text-center text-7xl mb-10 leading-7 text-gray-900"
                     style={{ fontFamily: 'DM Serif Text' }}
                 >Profile</h2>
-                <Tilt>
+            <Tilt>
                 <div className='box'>
                     <div className="border-b border-gray-900/10 pb-12">
                         <div className=" flex justify-center items-center text-center mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
