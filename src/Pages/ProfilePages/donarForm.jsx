@@ -75,6 +75,42 @@ export default function DonorForm({ id, setRecordId }) {
 
     return (
         <>
+
+            {message?.msg && (
+                <Alert
+                    variant={message?.error ? "danger" : "success"}
+                    dismissible
+                    onClose={() => setMessage("")}
+                >
+                    {message?.msg}
+                </Alert>
+            )}
+
+            <Banner />
+            <form onSubmit={handleSubmit} className='p-[-100px] bgImg' >
+                <h2 className="text-center text-7xl mb-10 leading-7 text-gray-900"
+                    style={{ fontFamily: 'DM Serif Text' }}
+                >Profile</h2>
+            <Tilt>
+                <div className='box'>
+                    <div className="border-b border-gray-900/10 pb-12">
+                        <div className=" flex justify-center items-center text-center mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                            <div className="grid gap-4 grid-cols-1 col-span-full text-center">
+                                <label htmlFor="photo" className="grid grid-cols-1 grid-rows-2 gap-x-2 gap-y-2 block text-6xl font-medium leading-8 text-gray-900"
+                                style={{ fontFamily: 'DM Serif Text' }}>
+                                    Photo
+                                </label>
+                                <div className="-mt-10 -mr-5 ml-20 mb-40 grid grid-cols-1 grid-rows-1 gap-x-9 gap-y-9">
+                                    <UserCircleIcon className="mt-4 mr-10 h-[230px] w-[230px] text-gray-300" aria-hidden="true" />
+                                    <button
+                                        type="button"
+                                        className="rounded-md bg-red px-1.5 py-1.5 text-base font-bold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                        >
+                                        Change
+                                    </button>
+                                </div>
+                            </div>
+
             <Navbar />
             <form onSubmit={handleSubmit} className="p-6 pt-20 min-h-fit" >
                 <Banner />
@@ -94,6 +130,7 @@ export default function DonorForm({ id, setRecordId }) {
                             >
                                 Change
                             </button>
+
                         </div>
                     </div>
                     <div className="flex gap-6 relative max-md:flex-wrap max-md:justify-center">
@@ -223,6 +260,10 @@ export default function DonorForm({ id, setRecordId }) {
                         </div>
                     </div>
                 </div>
+
+                </Tilt>
+                <div className=" flex items-center justify-end gap-x-6 bg-[#e26959]">
+
                 <div>
                     {message?.msg && (
                         <Alert
@@ -234,6 +275,7 @@ export default function DonorForm({ id, setRecordId }) {
                         </Alert>
                     )}
                     <br />
+
                     <button type="reset" className="cancelbtn">
                         Cancel
                     </button>
