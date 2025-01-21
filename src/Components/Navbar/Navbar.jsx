@@ -1,132 +1,180 @@
-import { useState } from "react";
-import { Dialog, Popover } from "@headlessui/react";
+import { useState, useEffect } from "react";
+import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
-
 import Logo from "../assets/logo.png";
+import "./Navbar.css";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function Example() {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (e, href) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
-    <header className="bg-white">
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-1 lg:px-8"
-        aria-label="Global"
-      >
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img src={Logo} alt="" className="h-16" />
-          </a>
-        </div>
-        <div className="flex lg:hidden z-50">
+    <>
+      <header className={`navbar-header ${scrolled ? "scrolled" : ""}`}>
+        <nav className="navbar-container">
+          <div className="logo-container">
+            <a
+              href="/"
+              className="logo-link"
+              onClick={(e) => handleNavClick(e, "/")}
+            >
+              <img src={Logo} alt="Food Donor Logo" className="logo-image" />
+            </a>
+          </div>
+
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="mobile-menu-button"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-        </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="/" className="text-lg  leading-6 text-[#28183b] font-sans">
-            Home
-          </a>
-          <a
-            href="#about"
-            className="text-lg  leading-6 text-[#28183b] font-sans"
-          >
-            About
-          </a>
-          <a
-            href="/services"
-            className="text-lg  leading-6 text-[#28183b] font-sans"
-          >
-            Services
-          </a>
-          <a
-            href="/team"
-            className="text-lg  leading-6 text-[#28183b] font-sans"
-          >
-            Team
-          </a>
-        </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button />
-        </div>
-      </nav>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
+
+          <div className="nav-links">
+            {["Home", "About", "Services", "Team"].map((item) => (
+              <a
+                key={item}
+                href={
+                  item === "Home"
+                    ? "/"
+                    : item === "About"
+                    ? "#about"
+                    : `/${item.toLowerCase()}`
+                }
+                onClick={(e) =>
+                  handleNavClick(
+                    e,
+                    item === "Home"
+                      ? "/"
+                      : item === "About"
+                      ? "#about"
+                      : `/${item.toLowerCase()}`
+                  )
+                }
+              >
+                <i
+                  className={
+                    item === "Home"
+                      ? "fas fa-home"
+                      : item === "About"
+                      ? "fas fa-info-circle"
+                      : item === "Services"
+                      ? "fas fa-cogs"
+                      : "fas fa-users"
+                  }
+                ></i>
+                <span className="ml-2">{item}</span>
+              </a>
+            ))}
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+
+          <div className="button-container">
+            <Button />
+          </div>
+        </nav>
+
+        <Dialog
+          as="div"
+          className="lg:hidden"
+          open={mobileMenuOpen}
+          onClose={() => setMobileMenuOpen(false)}
+        >
+          <div
+            className="mobile-menu-overlay"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          <Dialog.Panel className="mobile-menu">
+            <div className="mobile-menu-header">
+              <a
+                href="/"
+                className="logo-container"
+                onClick={(e) => handleNavClick(e, "/")}
+              >
+                <img src={Logo} alt="Food Donor Logo" className="h-8 w-auto" />
+              </a>
+              <button
+                type="button"
+                className="mobile-menu-button"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className="mobile-menu-links">
+              {["Home", "About", "Services", "Team"].map((item) => (
                 <a
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  key={item}
+                  href={
+                    item === "Home"
+                      ? "/"
+                      : item === "About"
+                      ? "#about"
+                      : `/${item.toLowerCase()}`
+                  }
+                  onClick={(e) =>
+                    handleNavClick(
+                      e,
+                      item === "Home"
+                        ? "/"
+                        : item === "About"
+                        ? "#about"
+                        : `/${item.toLowerCase()}`
+                    )
+                  }
                 >
-                  Home
+                  <i
+                    className={
+                      item === "Home"
+                        ? "fas fa-home"
+                        : item === "About"
+                        ? "fas fa-info-circle"
+                        : item === "Services"
+                        ? "fas fa-cogs"
+                        : "fas fa-users"
+                    }
+                  ></i>
+                  <span className="ml-2">{item}</span>
                 </a>
-                <a
-                  href="#about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  About
-                </a>
-                <a
-                  href="/services"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Services
-                </a>
-                <a
-                  href="/team"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Team
-                </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
+              ))}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Button />
               </div>
             </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
-    </header>
+          </Dialog.Panel>
+        </Dialog>
+      </header>
+    </>
   );
 }

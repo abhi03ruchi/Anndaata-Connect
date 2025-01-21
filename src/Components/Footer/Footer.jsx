@@ -1,69 +1,96 @@
 import React from "react";
+import { useState } from "react";
 import logo from "../../Components/assets/logo.png";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    setMessage(email ? "Thank you for subscribing!" : "Please enter a valid email.");
+    if (email) setEmail("");
+  };
+
   return (
     <footer className="bg-[#302f2f] px-4 py-8">
       <div className="mx-auto w-full max-w-screen-xl">
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row md:justify-between gap-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-8">
           {/* Logo Section */}
-          <div className="flex justify-center md:justify-start mb-6 md:mb-0">
+          <div className="flex justify-center lg:justify-start mb-6 lg:mb-0">
             <a href="/" className="inline-block">
               <img
                 src={logo}
-                className="h-16 md:h-20"
+                className="h-14 sm:h-16 lg:h-20"
                 alt="AnnaDaata Connect Logo"
               />
             </a>
           </div>
+         {/* Newsletter Section */}
+ <div className="text-center mb-8">
+          <h2 className="text-white text-sm font-semibold mb-4">SUBSCRIBE TO OUR NEWSLETTER</h2>
+          <form onSubmit={handleSubscribe} className="flex justify-center items-center">
+          <input
+  type="email"
+  className="p-2 rounded-l-lg w-full sm:w-1/2 md:w-64 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#e26959] mb-1"
+  placeholder="Enter your email"
+/>
 
+      <button
+  type="submit"
+  className="bg-[#e26959] p-2 text-white rounded-lg font-semibold text-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-[#b85e4c] focus:outline-none focus:ring-2 focus:ring-[#e26959] focus:ring-opacity-50 shadow-md hover:shadow-lg"
+>
+  Subscribe
+</button>
+
+          </form>
+          {message && <p className="text-white mt-3">{message}</p>}
+        </div>
           {/* Links Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {/* Quick Links */}
-            <div className="text-center md:text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Quick Links */}
+            <div className="text-center lg:text-left">
               <h2 className="mb-4 text-sm font-semibold text-white uppercase">
                 Quick Links
               </h2>
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
-                  <a
-                    href="/team"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/team" className="hover:underline hover:text-[#e26959] transition-colors">
                     Team
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/services"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/services" className="hover:underline hover:text-[#e26959] transition-colors">
                     Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/privacypolicy" className="hover:underline hover:text-[#e26959] transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/termsandconditions" className="hover:underline hover:text-[#e26959] transition-colors">
+                    Terms and Conditions
                   </a>
                 </li>
               </ul>
             </div>
 
             {/* Join Us */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left">
               <h2 className="mb-4 text-sm font-semibold text-gray-50 uppercase">
                 Join Us
               </h2>
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
-                  <a
-                    href="/login"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/login" className="hover:underline hover:text-[#e26959] transition-colors">
                     Login
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/registration"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="/registration" className="hover:underline hover:text-[#e26959] transition-colors">
                     Register
                   </a>
                 </li>
@@ -71,28 +98,29 @@ const Footer = () => {
             </div>
 
             {/* Contact Us */}
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left space-y-3">
               <h2 className="mb-4 text-sm font-semibold text-gray-50 uppercase">
                 Contact Us
               </h2>
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
-                  <a
-                    href="mailto:abhiruchis03@gmail.com"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="mailto:abhiruchis03@gmail.com" className="hover:underline hover:text-[#e26959] transition-colors">
                     abhiruchis03@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="mailto:tarushi23@gmail.com"
-                    className="hover:underline hover:text-[#e26959] transition-colors"
-                  >
+                  <a href="mailto:tarushi23@gmail.com" className="hover:underline hover:text-[#e26959] transition-colors">
                     tarushi23@gmail.com
                   </a>
                 </li>
               </ul>
+              <div className="text-gray-50 font-semibold space-y-3">
+
+                  <a  href="/contactus" className="hover:underline hover:text-[#e26959] transition-colors">
+                    Contact Us Form
+                  </a>
+              </div>
+               
             </div>
           </div>
         </div>
@@ -104,14 +132,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <span className="text-gray-50 text-center sm:text-left text-sm md:text-base">
-            © {new Date().getFullYear()}{" "}
-            <a
-              href="/"
-              className="hover:underline hover:text-[#e26959] transition-colors"
-            >
-              AnnDaata Connect
-            </a>
-            . All Rights Reserved.
+            © {new Date().getFullYear()} <a href="/" className="hover:underline hover:text-[#e26959] transition-colors">AnnDaata Connect</a>. All Rights Reserved.
           </span>
 
           {/* Social Icons */}
@@ -135,23 +156,14 @@ const Footer = () => {
 
             {/* Twitter */}
             <a
-              href="#"
+              href="https://x.com/login.do"
               className="text-[#e26959] hover:text-gray-50 transition-colors"
               aria-label="Follow us on Twitter"
             >
-              <svg
-                className="w-6 h-6"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 17"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
-                  clipRule="evenodd"
-                />
+              <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 30 30">
+                <path d="M 6 4 C 4.895 4 4 4.895 4 6 L 4 24 C 4 25.105 4.895 26 6 26 L 24 26 C 25.105 26 26 25.105 26 24 L 26 6 C 26 4.895 25.105 4 24 4 L 6 4 z M 8.6484375 9 L 13.259766 9 L 15.951172 12.847656 L 19.28125 9 L 20.732422 9 L 16.603516 13.78125 L 21.654297 21 L 17.042969 21 L 14.056641 16.730469 L 10.369141 21 L 8.8945312 21 L 13.400391 15.794922 L 8.6484375 9 z M 10.878906 10.183594 L 17.632812 19.810547 L 19.421875 19.810547 L 12.666016 10.183594 L 10.878906 10.183594 z"></path>
               </svg>
+
             </a>
 
             {/* GitHub */}
@@ -180,5 +192,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

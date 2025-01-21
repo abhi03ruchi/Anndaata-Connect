@@ -1,19 +1,19 @@
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid';
-import React, { useState } from 'react';
+import { UserCircleIcon } from '@heroicons/react/24/solid';
+import React, { useState, useEffect, useCallback } from 'react';
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 import ProfileDataService from "../adminPage/admin";
-import { useEffect } from 'react';
 import { Alert } from 'react-bootstrap';
 import Banner from "../../Components/Banner";
 import './Form.css';
 import { useNavigate } from 'react-router-dom';
-import Tilt from 'react-parallax-tilt';
 export default function DonorForm({ id, setRecordId }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
     const [phone, setPhone] = useState('');
     const navigate = useNavigate();
-    const [message, setMessage] = useState({ error: false, msg: "" });
+    const [message, setMessage] = useState({ error: false, msg: "" })
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -51,7 +51,7 @@ export default function DonorForm({ id, setRecordId }) {
         navigate('/ngoList');
     };
 
-    const editHandler = async () => {
+    const editHandler = useCallback( async () => {
         setMessage("");
         try {
             const docSnap = await ProfileDataService.getName(id);
@@ -63,18 +63,19 @@ export default function DonorForm({ id, setRecordId }) {
         } catch (err) {
             setMessage({ error: true, msg: err.message });
         }
-    };
+    }, [id]);
 
     useEffect(() => {
         console.log("The id here is : ", id);
         if (id !== undefined && id !== "") {
             editHandler();
         }
-    }, [id]);
+    }, [id, editHandler]);
 
 
     return (
         <>
+
             {message?.msg && (
                 <Alert
                     variant={message?.error ? "danger" : "success"}
@@ -109,75 +110,88 @@ export default function DonorForm({ id, setRecordId }) {
                                     </button>
                                 </div>
                             </div>
+
+            <Navbar />
+            <form onSubmit={handleSubmit} className="p-6 pt-20 min-h-fit" >
+                <Banner />
+                <h2 className="text-4xl text-center mb-3 text-gray-900"
+                    style={{ fontFamily: 'Inter' }}
+                >Profile</h2>
+                <div className="flex flex-wrap m-auto relative justify-center max-w-[75rem] gap-6">
+                    <div className="flex flex-col min-w-72">
+                        <label htmlFor="photo" className="text-[15px] text-gray-800 font-semibold">
+                            Photo
+                        </label>
+                        <div className="flex flex-col items-center">
+                            <UserCircleIcon className="text-gray-400" aria-hidden="true" />
+                            <button
+                                type="button"
+                                className="border-2 max-w-fit py-1.5 px-3  border-solid border-red-500 text-red-500 hover:bg-red-500 hover:text-red-50"
+                            >
+                                Change
+                            </button>
+
                         </div>
                     </div>
-                    <div className="text-left border-b border-gray-900/10">
-                        <div className="mt-2 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-lg ml-25 -mb-4 mr-20 font-bold leading-6 text-gray-900">
-                                Name
+                    <div className="flex gap-6 relative max-md:flex-wrap max-md:justify-center">
+                        <div className="flex flex-col w-full">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="first-name" className="text-[15px] text-gray-800 font-semibold">
+                                    Name
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="first-name"
                                         id="first-name"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
-                                        autoComplete="given-name"
-                                        className=" peer block w-[20rem] -ml- 10 mt-8 appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-3">
-                                <label htmlFor="last-name" className="block text-lg ml-10 font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="last-name" className="text-[15px] text-gray-800 font-semibold">
                                     Email address
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         id="email"
                                         name="email"
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        autoComplete="email"
-                                        className="peer block w-[15rem] ml-10 appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-3 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-3">
-                                <label htmlFor="number" className="block text-lg font-bold -ml-15 mr-15 -mb-3 leading-6 text-gray-900 
-">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="number" className="text-[15px] text-gray-800 font-semibold">
                                     Phone Number
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         id="number"
                                         name="number"
                                         type="number"
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
-                                        autoComplete="number"
-                                        className="relative peer block w-[12rem] ml-25 mr-20 -mb-13 appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-3">
-                                <label htmlFor="country" className="block text-lg font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="country" className="text-[15px] text-gray-800 font-semibold">
                                     Country
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <select
                                         id="country"
                                         name="country"
-                                        autoComplete="country-name"
-                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     >
                                         <option>India</option>
                                         <option>Canada</option>
@@ -185,86 +199,95 @@ export default function DonorForm({ id, setRecordId }) {
                                     </select>
                                 </div>
                             </div>
-
-                            <div className="col-span-full">
-                                <label htmlFor="street-address" className="block text-lg font-bold ml-3 mb-5 leading-6 text-gray-900">
+                        </div>
+                        <div className="flex flex-col w-full">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="street-address" className="text-[15px] text-gray-800 font-semibold">
                                     Street address
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="street-address"
                                         id="street-address"
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
-                                        autoComplete="street-address"
-                                        className="relative peer block w-[25rem] ml-5 mb-5 mappearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-2 sm:col-start-1">
-                                <label htmlFor="city" className="block text-lg ml-5 -mt-3 -mr-25 font-bold leading-6 text-gray-900 grid gap-5 grid-cols-3">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="city" className="text-[15px] text-gray-800 font-semibold">
                                     City
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="city"
                                         id="city"
-                                        autoComplete="address-level2"
-                                        className="absolute peer block w-[10rem] -ml-5  appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder="" />
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
+                                    />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-2">
-                                <label htmlFor="region" className="block text-lg -mb-3 font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="region" className="text-[15px] text-gray-800 font-semibold">
                                     State / Province
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="region"
                                         id="region"
-                                        autoComplete="address-level1"
-                                        className="absolute peer block w-[10rem] -ml-2 appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
-                            <div className="sm:col-span-2">
-                                <label htmlFor="postal-code" className="block text-lg -mb-3 font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="postal-code" className="text-[15px] text-gray-800 font-semibold">
                                     ZIP / Postal code
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="postal-code"
                                         id="postal-code"
-                                        autoComplete="postal-code"
-                                        className="peer block w-[10rem] mb-10 appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 </Tilt>
                 <div className=" flex items-center justify-end gap-x-6 bg-[#e26959]">
+
+                <div>
+                    {message?.msg && (
+                        <Alert
+                            variant={message?.error ? "danger" : "success"}
+                            dismissible
+                            onClose={() => setMessage("")}
+                        >
+                            {message?.msg}
+                        </Alert>
+                    )}
+                    <br />
+
                     <button type="reset" className="cancelbtn">
                         Cancel
                     </button>
                     <button
-
                         type="submit"
-                        className="savebtn">
-                        Save 
-                    </button> 
+                        className="savebtn"
+                    >
+                        Save
+                    </button>
                 </div>
             </form>
+            <Footer />
         </>
     )
 }

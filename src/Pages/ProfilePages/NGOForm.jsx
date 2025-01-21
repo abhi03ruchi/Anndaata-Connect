@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react';
 import Banner from "../../Components/Banner";
 import './Form.css';
 import { database } from '../../FirebaseConfig'
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore'
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
 import { imgDB } from "../../FirebaseConfig";
 import { useNavigate } from 'react-router-dom';
-import Tilt from 'react-parallax-tilt';
 
 export default function DonorForm() {
     const [img, setImg] = useState('');
@@ -93,6 +94,7 @@ export default function DonorForm() {
     }
     return (
         <>
+
             <Banner />
             <div className='p-[-10px] bgImg'>
             <h2 className="text-center text-7xl mb-10 leading-7 text-gray-900"
@@ -114,73 +116,85 @@ export default function DonorForm() {
                                         onChange={(e) => handleUpload(e)} />
                                 </div>
                             </div>
+
+            <Navbar />
+            <div className='p-6 pt-20 min-h-fit' >
+                <Banner />
+                <h2 className="text-4xl text-center mb-3 text-gray-900"
+                    style={{ fontFamily: 'Inter' }}
+                >Profile</h2>
+                <div className='flex flex-wrap m-auto relative justify-center max-w-[75rem] gap-6'>
+                    <div className="flex flex-col min-w-72">
+                        <label htmlFor="photo" className="text-[15px] text-gray-800 font-semibold">
+                            Logo
+                        </label>
+                        <div className="flex flex-col items-center">
+                            <UserCircleIcon className="text-gray-400" aria-hidden="true" />
+                            <input type="file"
+                                className="rounded-md bg-white px-1.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                onChange={(e) => handleUpload(e)} />
+
                         </div>
                     </div>
-                    <div className="text-left border-b border-gray-900/10">
-                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            <div className="sm:col-span-3">
-            
-                            <label htmlFor="first-name"class="block text-lg font-bold leading-6 text-gray-900" >
+                    <div className="flex gap-6 relative max-md:flex-wrap max-md:justify-center">
+                        <div className="flex flex-col w-full">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="first-name" className="text-[15px] text-gray-800 font-semibold">
                                     Name of Organization
-                            </label>
-                                <div className="mt-2">
+                                </label>
+                                <div>
                                     <input
                                         type="text"
                                         name="full-name"
                                         id="full-name"
                                         value={nameOrg}
                                         onChange={(e) => setNameOrg(e.target.value)}
-                                        autoComplete="given-name"
-                                        className='peer block w-[15rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""'/>
-                                    </div>
-                            </div> 
-                            <div className="sm:col-span-3">
-                                <label htmlFor="last-name" className="block text-lg font-bold leading-6 text-gray-900">
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="last-name" className="text-[15px] text-gray-800 font-semibold">
                                     Email address of Organization
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         id="email"
                                         name="email"
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        autoComplete="email"
-                                        className="peer block w-[15rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-3">
-                                <label htmlFor="number" className="block text-lg font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="number" className="text-[15px] text-gray-800 font-semibold">
                                     Name of Person
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="first-name"
                                         id="first-name"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
-                                        autoComplete="number"
-                                        className="peer block w-[15rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-3">
-                                <label htmlFor="Time" className="block text-lg font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="Time" className="text-[15px] text-gray-800 font-semibold">
                                     Time
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <select
                                         id="Time"
                                         name="Time"
-                                        autoComplete="time-name"
-                                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                         value={time}
                                         onChange={(e) => setTime(e.target.value)}
                                     >
@@ -190,85 +204,87 @@ export default function DonorForm() {
                                     </select>
                                 </div>
                             </div>
-
-
-                            <div className="col-span-full">
-                                <label htmlFor="street-address" className="block text-lg font-bold leading-6 text-gray-900">
+                        </div>
+                        <div className="flex flex-col w-full">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="street-address" className="text-[15px] text-gray-800 font-semibold">
                                     Street address
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="street-address"
                                         id="street-address"
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
-                                        autoComplete="street-address"
-                                        className="peer block w-[20rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-2 sm:col-start-1">
-                                <label htmlFor="city" className="block text-lg font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="city" className="text-[15px] text-gray-800 font-semibold">
                                     City
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="city"
                                         id="city"
-                                        autoComplete="address-level2"
-                                        className="peer block w-[10rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-2">
-                                <label htmlFor="region" className="block text-lg font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="region" className="text-[15px] text-gray-800 font-semibold">
                                     Number of Meals
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="region"
                                         id="region"
-                                        autoComplete="address-level1"
                                         value={mealno}
                                         onChange={(e) => setMealno(e.target.value)}
-                                        className="peer block w-[10rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder=""
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
                                     />
                                 </div>
                             </div>
-                            <div className="sm:col-span-2">
-                                <label htmlFor="postal-code" className="block text-lg font-bold leading-6 text-gray-900">
+                            <div className="flex flex-col items-start gap-2 max-md:flex-wrap max-md:justify-center max-md:items-center">
+                                <label htmlFor="postal-code" className="text-[15px] text-gray-800 font-semibold">
                                     ZIP / Postal code
                                 </label>
-                                <div className="mt-2">
+                                <div>
                                     <input
                                         type="text"
                                         name="postal-code"
                                         id="postal-code"
-                                        autoComplete="postal-code"
-                                        className="peer block w-[10rem] appearance-none border-0 border-b-2 border-gray-700 
-                                        bg-transparent px-0 py-2.5 text-lg text-black focus:border-blue-500 focus:outline-none focus:ring-0" placeholder="" />
+                                        className="text-md p-2 rounded-md min-w-72 border-2 border-solid border-gray-300 focus:border-red-500 active:border-red-500 focus:outline-none active:outline-none outline-none mb-4"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </Tilt> 
             <div className="flex items-center justify-end gap-x-6 bg-[#e26959]">
+
+                <div className='flex items-center justify-center'>
+
                     <button type="reset" className="cancelbtn">
-                        Cancel 
+                        Cancel
                     </button>
                     {!show ? <button className="savebtn" onClick={handleCreate}>Create</button> :
                         <button onClick={handleUpdate}>Update</button>}
                     </div>
                 </div>
+
+
+            </div>
+            <Footer />
+
         </>
     )
 }

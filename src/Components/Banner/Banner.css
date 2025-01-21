@@ -322,3 +322,156 @@
     display: none;
   }
 }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+
+.banner-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.banner-background {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/backgrd.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateX(2deg);
+  transform-origin: top;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.banner-content {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-text-container {
+  padding: 0 1.5rem;
+}
+
+.banner-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-top: 6rem;
+  color: antiquewhite;
+}
+
+.banner-subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin-top: 2.5rem;
+  letter-spacing: 0.025em;
+  color: antiquewhite;
+}
+
+.highlight {
+  color: #e26959;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: #ff8576;
+}
+
+.banner-buttons {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.banner-button {
+  height: 50px;
+  width: 190px;
+  padding: 1.25rem !important;
+  transition: transform 0.3s ease;
+}
+
+.banner-button:hover {
+  transform: scale(1.05);
+}
+
+.github-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.github-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.animated-text {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-heading {
+    font-size: 3.5rem;
+    margin-top: 4rem;
+  }
+  
+  .banner-subheading {
+    font-size: 1.125rem;
+  }
+  
+  .banner-text-container {
+    padding: 0 3rem;
+  }
+  
+  .banner-break {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner-heading {
+    font-size: 4.5rem;
+  }
+  
+  .banner-subheading {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner-break {
+    display: none;
+  }
+  
+  .banner-heading {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .banner-subheading {
+    font-size: 0.875rem;
+  }
+}

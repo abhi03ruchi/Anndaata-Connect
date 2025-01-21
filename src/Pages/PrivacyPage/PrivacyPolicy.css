@@ -1,0 +1,87 @@
+/* Privacy Policy Page Styles */
+.privacy-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .privacy-container h1 {
+    font-weight: 700;
+    color: rgb(226, 105, 89);
+    font-family: 'Inder', sans-serif;
+  }
+  
+  .privacy-container h2 {
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: rgb(226, 105, 89);
+    font-family: 'Inder', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .privacy-container h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    border-radius: 2px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    background-color: rgb(226, 105, 89);
+}
+  
+  .privacy-container h3 {
+    font-size: 1.5rem;
+    color: rgb(226, 105, 89);
+    margin-top: 20px;
+  }
+  
+  .privacy-container p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  .privacy-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-container a {
+    color: rgb(226, 105, 89);
+    text-decoration: none;
+  }
+  
+  .privacy-container a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .back-button:hover {
+    background-color: #800000;
+  }
+  
