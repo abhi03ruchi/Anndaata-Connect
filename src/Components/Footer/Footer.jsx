@@ -57,22 +57,22 @@ const Footer = () => {
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
                   <a href="/team" className="hover:underline hover:text-[#e26959] transition-colors">
-                    Team
+                    <i className="fas fa-users mr-2"></i> Team
                   </a>
                 </li>
                 <li>
                   <a href="/services" className="hover:underline hover:text-[#e26959] transition-colors">
-                    Services
+                    <i className="fas fa-cogs mr-2"></i> Services
                   </a>
                 </li>
                 <li>
                   <a href="/privacypolicy" className="hover:underline hover:text-[#e26959] transition-colors">
-                    Privacy Policy
+                    <i className="fas fa-shield-alt mr-2"></i> Privacy Policy
                   </a>
                 </li>
                 <li>
                   <a href="/termsandconditions" className="hover:underline hover:text-[#e26959] transition-colors">
-                    Terms and Conditions
+                    <i className="fas fa-file-contract mr-2"></i> Terms and Conditions
                   </a>
                 </li>
               </ul>
@@ -86,12 +86,12 @@ const Footer = () => {
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
                   <a href="/login" className="hover:underline hover:text-[#e26959] transition-colors">
-                    Login
+                    <i className="fas fa-sign-in-alt mr-2"></i> Login
                   </a>
                 </li>
                 <li>
                   <a href="/registration" className="hover:underline hover:text-[#e26959] transition-colors">
-                    Register
+                    <i className="fas fa-user-plus mr-2"></i> Register
                   </a>
                 </li>
               </ul>
@@ -105,19 +105,19 @@ const Footer = () => {
               <ul className="text-gray-50 font-medium space-y-3">
                 <li>
                   <a href="mailto:abhiruchis03@gmail.com" className="hover:underline hover:text-[#e26959] transition-colors">
-                    abhiruchis03@gmail.com
+                   abhiruchis03@gmail.com
                   </a>
                 </li>
                 <li>
                   <a href="mailto:tarushi23@gmail.com" className="hover:underline hover:text-[#e26959] transition-colors">
-                    tarushi23@gmail.com
+                  tarushi23@gmail.com
                   </a>
                 </li>
               </ul>
               <div className="text-gray-50 font-semibold space-y-3">
 
                   <a  href="/contactus" className="hover:underline hover:text-[#e26959] transition-colors">
-                    Contact Us Form
+                  <i className="fas fa-envelope mr-2"></i>  Contact Us Form
                   </a>
               </div>
                
