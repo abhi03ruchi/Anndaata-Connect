@@ -7,6 +7,7 @@ import Login from './Pages/RegisterAndLoginforNGO/Login';
 import Registration from './Pages/RegisterAndLoginforNGO/Registration';
 import DonorRegistration from './Pages/Registerpagefordonors/register';
 import TermsAndConditions from './Pages/TermsandConditionsPage/Terms';
+import Contributers from './Pages/contributerspage/contributers';
 import ContactUs from './Pages/ContactUsPage/ContactUs';
 import PrivacyPolicy from './Pages/PrivacyPage/privacy';
 import { UserAuthContextProvider } from './context/UserAuthContext';
@@ -38,6 +39,7 @@ function App() {
           <Route path="/donor-register" element={<DonorRegistration />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/contributers" element={<Contributers />} />
         </Routes>
       </UserAuthContextProvider>
     </div>
