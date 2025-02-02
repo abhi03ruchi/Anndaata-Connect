@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ContactUs.css';
-
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,6 +22,9 @@ const ContactUs = () => {
   };
 
   return (
+    <>
+    <Navbar/>
+    <div className='contact-page'>
     <div className="contact-container">
       <h2>Contact Us</h2>
       <p>Have questions or feedback? We'd love to hear from you!</p>
@@ -65,6 +69,9 @@ const ContactUs = () => {
         <p><strong>Phone:</strong> +91 987XXXXXXX</p>
       </div>
     </div>
+    </div>
+    <Footer/>
+    </>
   );
 };
 
