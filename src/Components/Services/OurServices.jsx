@@ -5,10 +5,10 @@ import Footer from "../Footer/Footer";
 
 const ServiceCard = ({ title, description, linkTo }) => (
   <div className="w-full md:w-96 transform transition-all duration-300 hover:translate-y-[-8px]">
-    <div className="h-full bg-white rounded-2xl shadow-lg overflow-hidden border-b-4 border-indigo-900">
+    <div className="h-full bg-white rounded-2xl shadow-lg overflow-hidden border-b-4 border-[rgb(226,105,89)]">
       <div className="p-8 h-full flex flex-col">
         <div className="flex items-center justify-center mb-6">
-          <h3 className="text-2xl font-bold text-indigo-900 pb-2 border-b-2 border-indigo-900">
+          <h3 className="text-2xl font-bold text-[rgb(226,105,89)] pb-2 border-b-2 border-[rgb(226,105,89)]">
             {title}
           </h3>
         </div>
@@ -17,7 +17,7 @@ const ServiceCard = ({ title, description, linkTo }) => (
         </p>
         <Link 
           to={linkTo}
-          className="inline-block bg-gradient-to-r from-indigo-900 to-indigo-700 text-white font-semibold px-6 py-3 rounded-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          className="inline-block bg-[rgb(226,105,89)] from-indigo-900 to-indigo-700 text-white font-semibold px-6 py-3 rounded-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
         >
           Learn More
         </Link>
@@ -31,7 +31,7 @@ const OurServices = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
       
-      <section className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 my-[5vh] mx-0">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Services
