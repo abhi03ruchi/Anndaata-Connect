@@ -1,8 +1,12 @@
 import React from 'react';
 import './Terms.css';
-
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 const TermsAndConditions = () => {
   return (
+<>
+    <Navbar/>
+    <div className='contact-page'>
     <div className="terms-container">
       <h1 className="terms-heading">Terms and Conditions</h1>
       <div className="terms-content">
@@ -52,6 +56,9 @@ const TermsAndConditions = () => {
         
       </div>
     </div>
+    </div>
+     <Footer/>
+     </>
   );
 };
 

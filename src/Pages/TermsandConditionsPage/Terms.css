@@ -1,6 +1,33 @@
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.contact-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../public/contactback1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* filter: blur(5px); */
+  z-index: -1; 
+  opacity: 0.8;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 3; 
+}
 .terms-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 8rem auto;
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #f5f4f4; 
