@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Logo from "../../Components/assets/logo.png";
 import './register.css';
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 
 function DonorRegistration() {
   const [formData, setFormData] = useState({
@@ -51,6 +53,8 @@ function DonorRegistration() {
   };
   
   return (
+    <>
+        <Navbar/>
     <div className="registration-container">
         <div className="logo-container">
             <a
@@ -106,6 +110,8 @@ function DonorRegistration() {
         <button type="submit">Register</button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 }
 
