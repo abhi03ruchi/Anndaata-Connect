@@ -17,7 +17,7 @@
   } */
   
   .navbar-container {
-    gap: 17vw;
+    gap: 8vw;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0.5rem 1rem;
@@ -145,7 +145,7 @@
   @media (min-width: 1024px) {
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      /* gap: 1.5rem; */
       align-items: center;
     }
   

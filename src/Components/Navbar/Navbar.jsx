@@ -61,7 +61,7 @@ export default function Navbar() {
           </button>
 
           <div className="nav-links">
-            {["Home", "About", "Services", "Team"].map((item) => (
+            {["Home", "About", "Services", "Team","contributers"].map((item) => (
               <a
                 key={item}
                 href={
@@ -90,7 +90,9 @@ export default function Navbar() {
                       ? "fas fa-info-circle"
                       : item === "Services"
                       ? "fas fa-cogs"
-                      : "fas fa-users"
+                      : item === "Team"
+                      ? "fas fa-users"
+                      : "fas fa-hands-helping"
                   }
                 ></i>
                 <span className="ml-2">{item}</span>
@@ -133,7 +135,7 @@ export default function Navbar() {
             </div>
 
             <div className="mobile-menu-links">
-              {["Home", "About", "Services", "Team"].map((item) => (
+              {["Home", "About", "Services", "Team", "contributers"].map((item) => (
                 <a
                   key={item}
                   href={
@@ -162,7 +164,9 @@ export default function Navbar() {
                         ? "fas fa-info-circle"
                         : item === "Services"
                         ? "fas fa-cogs"
-                        : "fas fa-users"
+                        : item === "Team"
+                        ? "fas fa-users"
+                        : "fas fa-hands-helping"
                     }
                   ></i>
                   <span className="ml-2">{item}</span>
