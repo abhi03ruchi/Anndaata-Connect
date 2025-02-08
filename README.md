@@ -134,6 +134,15 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+## Contributors
+
+A huge shoutout to all the amazing contributors
+
+<a href="https://github.com/abhi03ruchi/Anndaata-Connect/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=abhi03ruchi/Anndaata-Connect" />
+</a>
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
