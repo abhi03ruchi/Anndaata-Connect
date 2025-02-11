@@ -169,3 +169,40 @@
       display: none;
     }
   }
+
+  .nav-links a:nth-child(1){
+    animation: load 1s ease;
+  }
+
+  .nav-links a:nth-child(2){
+    animation: load 1.3s ease;
+  }
+
+  .nav-links a:nth-child(3){
+    animation: load 1.6s ease;
+  }
+
+  .nav-links a:nth-child(4){
+    animation: load 1.9s ease;
+  }
+
+  .nav-links a:nth-child(5){
+    animation: load 2.2s ease;
+  }
+
+  .button-container{
+    animation: load 2.5s ease;
+  }
+
+  .logo-link{
+    animation: load 1s ease;
+  }
+
+  @keyframes load {
+    from{
+      transform: translateY(-50px);
+    }
+    to{
+      transform: translateY(0px);
+    }
+  }
